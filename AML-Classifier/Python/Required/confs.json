@@ -1,0 +1,7 @@
+{
+	"Settings":{
+		"TrainDir":"Model/Data/",
+		"DataFile":"Model/Data/data.h5",
+		"LabelsFile":"Model/Data/labels.h5"
+	}
+}
