@@ -44,7 +44,7 @@ def grayScale(self, image, filePath, filename, show = False):
 ```
 
 ### Histogram Equalization
-<a href="https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_histograms/py_histogram_equalization/py_histogram_equalization.html"><img style="float: left;" src="../Media/Images/histogram_equalization.png" title="Histogram Equalization with OpenCV"></a>
+<a href="https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_histograms/py_histogram_equalization/py_histogram_equalization.html"><img style="float: left;" src="Media/Images/histogram_equalization.png" title="Histogram Equalization with OpenCV"></a>
 <div style="clear:both;"></div>
 <i>Image: <a href="https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_histograms/py_histogram_equalization/py_histogram_equalization.html">OpenCV/Wikipedia</a></i>
 
