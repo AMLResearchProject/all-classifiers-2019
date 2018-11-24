@@ -115,6 +115,10 @@ def gaussian(self, filePath, gaussianPath, show = False):
 # Clone the code from the Github repo
 You will need to clone the project from our Github to which ever device you are going to run it on. 
 
+```
+ $ git clone https://github.com/AMLResearchProject/AML-Classifiers.git
+```
+
 # Dataset Access
 The [Acute Lymphoblastic Leukemia Image Database for Image Processing](https://homes.di.unimi.it/scotti/all/) by [Fabio Scotti, Associate Professor Dipartimento di Informatica, Università degli Studi di Milano](https://homes.di.unimi.it/scotti/) is used with this project, you can request access by following the unstructions on the [Download and Term of use](https://homes.di.unimi.it/scotti/all/#download) page, you can also view [Reporting the results on ALL-IDB](https://homes.di.unimi.it/scotti/all/results.php) for information on how to organize and submit your findings.
 
