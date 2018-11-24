@@ -1,19 +1,11 @@
-# Peter Moss Acute Myeloid Leukemia Research Computer Vision Projects
-![Peter Moss Acute Myeloid Leukemia Research Computer Vision Projects](Media/Images/Banner-Social.jpg) 
+# Acute Myeloid Leukemia Research Python Classifier
+![Acute Myeloid Leukemia Research Python Classifier](../Media/Images/Banner-Social.jpg) 
 
-This area of the Peter Moss AML(Acute Myeloid Leukemia) Research Project focuses on Computer Vision research and development, specifically Convolutional Neural Networks for detection/early detection purposes. 
+The Acute Myeloid Leukemia Research Python Classifier is a pure Python Convolutional Neural Network created using minimal 3rd party libraries / frameworks. The classifier is part of the Peter Moss AML(Acute Myeloid Leukemia) Research Project computer vision R&D and the focus is detection/early detection of AML cells in slides. 
 
-The AML Research Project is being organized and developed by a team of volunteers with experience in Leukemia research, computer vision, biochemistry & molecular biophysics among other areas of expertise. The team is currently made up of:
+To run your own classifier you should follow the tutorials and Notebooks linked below:
 
-- [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") - Bigfinite IoT Network Engineer & Intel Software Innovator.
-- [Ho Leung Ng](https://github.com/holeung "Ho  Leung Ng") - Kansas State University, Dept. Biochemistry & Molecular Biophysics.
-- John LaRocco - Former Humai Head of Engineering, LA, USA.
-- [Amita Kapoor](https://github.com/amita-kapoor "Amita Kapoor") - Associate Professor @ Delhi University, New Dehli, India.
-
-# Projects
-Below you will find a list of computer vision projects that are part of this repo:
-
-- [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker"): [Python Data augmentation](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/Python/Augmentation.md "Python Data augmentation") - A Python program for applying filters to the original dataset and increasing the amount of training / test data. 
+- [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker"): [Python Data augmentation](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/Python/Augmentation.md "Python Data augmentation") - A Python tutorial and Notebook for applying filters to the original dataset and increasing the amount of training / test data.
 
 # Research papers followed
 The papers that this part of the project is based on were provided by project team member, Ho Leung, Associate Professor of Biochemistry & Molecular Biophysics at Kansas State University. 
@@ -36,3 +28,8 @@ This project is licensed under the **MIT License** - see the [LICENSE](https://g
 
 # Bugs/Issues
 We use the [repo issues](issues "repo issues") to track bugs and general requests related to using this project. 
+
+# About The Author
+Adam is a [BigFinite](https://www.bigfinite.com "BigFinite") IoT Network Engneer, part of the team that works on the core IoT software for our platform. In his spare time he is an [Intel Software Innovator](https://software.intel.com/en-us/intel-software-innovators/overview "Intel Software Innovator") in the fields of Internet of Things, Artificial Intelligence and Virtual Reality.
+
+[![Adam Milton-Barker: BigFinte IoT Network Engineer & Intel® Software Innovator](../Media/Images/Adam-Milton-Barker.jpg)](https://github.com/AdamMiltonBarker)

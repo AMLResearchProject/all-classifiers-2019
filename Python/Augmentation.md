@@ -3,6 +3,8 @@
 
 The AML Classifier Data Augmentation program applies filters to the original dataset and increasing the amount of training / test data. The AML Classifier Data Augmentation program is part of the computer vision research and development for the Peter Moss Acute Myeloid Leukemia Research Project. 
 
+I decided to use some augmentation proposals outlined in Leukemia Blood Cell Image Classification Using Convolutional Neural Network by T. T. P. Thanh, Caleb Vununu, Sukhrob Atoev, Suk-Hwan Lee, and Ki-Ryong Kwon. The augmentations I chose were grayscaling, histogram equalization, horizontal and vertical reflection and gaussian blur to start with. Using these techniques so far I have been able to increase a dataset from 49 positive and 49 negative images to 270 positive and 270 negative, with more augmentations to experiment with.
+
 # Research papers followed
 The papers that this part of the project is based on were provided by project team member, Ho Leung, Associate Professor of Biochemistry & Molecular Biophysics at Kansas State University. 
 
@@ -15,9 +17,7 @@ The [Acute Lymphoblastic Leukemia Image Database for Image Processing](https://h
 
 ## Data augmentation
 <img style="width: 100%;" src="Media/Images/slides.png" title="Data augmentation example">
-<div style="clear:both;">
-
-I decided to use some augmentation proposals outlined in Leukemia Blood Cell Image Classification Using Convolutional Neural Network by T. T. P. Thanh, Caleb Vununu, Sukhrob Atoev, Suk-Hwan Lee, and Ki-Ryong Kwon. The augmentations I chose were grayscaling, histogram equalization, horizontal and vertical reflection and gaussian blur to start with. Using these techniques so far I have been able to increase a dataset from 49 positive and 49 negative images to 270 positive and 270 negative, with more augmentations to experiment with. 
+<div style="clear:both;"> 
 
 The full Python class that holds the functions mentioned below can be found in [Classes/Data.py](Classes/Data.py), The Data class is a wrapper class around releated functions provided in popular computer vision libraries including as OpenCV and Scipy.
 
@@ -124,8 +124,8 @@ The [Acute Lymphoblastic Leukemia Image Database for Image Processing](https://h
 
 Once you have access to the dataset, you should add your dataset to the 0 & 1 directories in the Model/Data directory, if you configure the same way you do not need to change any settings. I used 45 images from each folder resulting in a training / testing set of 90 images before data augmentation.
 
-# The DataAugmentation Notebook
-In the project Data folder you will find a Juypter Notebook named [DataAugmentation.ipynb](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/Data/DataAugmentation.ipynb "DataAugmentation.ipynb"). This Notebook seems to not run well on Github, but if you have cloned the repo you should be able to launch the Notebook fine, the Notebook provides a full walk through of the data augmentation program.
+# The Augmentation Notebook
+In the project Data folder you will find a Juypter Notebook named [Augmentation.ipynb](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/Python/Augmentation.ipynb "Augmentation.ipynb"). This Notebook seems to not run well on Github, but if you have cloned the repo you should be able to launch the Notebook fine, the Notebook provides a full walk through of the data augmentation program.
 
 # Contributing
 We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.
