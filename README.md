@@ -13,7 +13,17 @@ The AML Research Project is being organized and developed by a team of volunteer
 # Projects
 Below you will find a list of computer vision projects that are part of this repo:
 
-- [Data augmentation](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/Data/ "Data augmentation") - A Python program for applying filters to the original dataset and increasing the amount of training / test data.
+- [Data augmentation](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/Data/ "Data augmentation") - A Python program for applying filters to the original dataset and increasing the amount of training / test data. 
+
+# Research papers followed
+The papers that this part of the project is based on were provided by project team member, Ho Leung, Associate Professor of Biochemistry & Molecular Biophysics at Kansas State University. 
+
+## Leukemia Blood Cell Image Classification Using Convolutional Neural Network
+T. T. P. Thanh, Caleb Vununu, Sukhrob Atoev, Suk-Hwan Lee, and Ki-Ryong Kwon 
+http://www.ijcte.org/vol10/1198-H0012.pdf
+
+# Dataset
+The [Acute Lymphoblastic Leukemia Image Database for Image Processing](https://homes.di.unimi.it/scotti/all/) dataset is used for this project. The dataset was created by [Fabio Scotti, Associate Professor Dipartimento di Informatica, Università degli Studi di Milano](https://homes.di.unimi.it/scotti/). Big thanks to Fabio for his research and time put in to creating the dataset and documentation, it is one of his personal projects. You will need to follow the steps outlined [here](https://homes.di.unimi.it/scotti/all/#download) to gain access to the dataset.
 
 # Contributing
 We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.
