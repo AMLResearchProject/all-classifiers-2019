@@ -26,7 +26,7 @@
 # Title:         Acute Myeloid Leukemia Classifier Tools
 # Description:   Common tools used by the Acute Myeloid Leukemia Classifier.
 # Configuration: required/confs.json
-# Last Modified: 2018-11-17
+# Last Modified: 2018-11-24
 #
 ############################################################################################
 
