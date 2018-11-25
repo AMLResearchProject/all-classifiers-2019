@@ -31,7 +31,7 @@ You will need to clone the project from our Github to which ever device you are 
 # Dataset Access
 The [Acute Lymphoblastic Leukemia Image Database for Image Processing](https://homes.di.unimi.it/scotti/all/) by [Fabio Scotti, Associate Professor Dipartimento di Informatica, Università degli Studi di Milano](https://homes.di.unimi.it/scotti/) is used with this project, you can request access by following the unstructions on the [Download and Term of use](https://homes.di.unimi.it/scotti/all/#download) page, you can also view [Reporting the results on ALL-IDB](https://homes.di.unimi.it/scotti/all/results.php) for information on how to organize and submit your findings.
 
-Once you have access to the dataset, you should add your dataset to the 0 & 1 directories in the Model/Data directory, if you configure the same way you do not need to change any settings. I used 45 images from each folder resulting in a training / testing set of 90 images before data augmentation.
+Once you have access to the dataset, you should add your dataset to the 0 & 1 directories in the Model/Data directory, if you configure the same way you do not need to change any settings. I used 49 images from each folder resulting in a training / testing set of 98 images before data augmentation.
 
 # The Augmentation Notebook
 In the project Data folder you will find a Juypter Notebook named [Augmentation.ipynb](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/Python/Augmentation.ipynb "Augmentation.ipynb"). This Notebook seems to not run well on Github, but if you have cloned the repo you should be able to launch the Notebook fine, the Notebook provides a full walk through of the data augmentation program.
