@@ -63,7 +63,7 @@ class Data():
         
         cv2.imwrite(filename, image)
 
-    def grayScale(self, image, filePath, filename, show = False):
+    def grayScale(self, image, grayPath, filename, show = False):
         
         ###############################################################
         #
@@ -71,10 +71,9 @@ class Data():
         #
         ###############################################################
         
-        print(filePath)
-        image = cv2.resize(image, self.fixed)
+        print(grayPath)
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        self.writeImage(filePath, gray)
+        self.writeImage(grayPath, gray)
         if show is True:
             plt.imshow(gray)
             plt.show()
@@ -154,9 +153,11 @@ class Data():
                 for filename in os.listdir(path):
                     if filename.endswith('.jpg'):
                         filePath = os.path.join(path, filename)
+                        print(filePath)
+                        image = cv2.resize(cv2.imread(filePath), self.fixed)
+                        self.writeImage(filePath, image)
                         grayPath = os.path.join(path, "Gray-"+filename)
-                        print(grayPath)
-                        image, gray = self.grayScale(cv2.resize(cv2.imread(filePath), self.fixed), grayPath, filename, show = True)
+                        image, gray = self.grayScale(image, grayPath, filename, show = True)
                         histPath = os.path.join(path, "hist-"+filename)
                         hist = self.equalizeHist(gray, histPath, filename, show = True)
                         horPath = os.path.join(path, "hor-"+filename)
@@ -167,4 +168,4 @@ class Data():
                         fCount += 1
                     else:
                         continue
-                print(" AML-DNN: " + self.Tools.currentDateTime() + "  - Gray scaled " + str(fCount) + " files in " + str(directory))
+                print(" AML-DNN: " + self.Tools.currentDateTime() + "  - Added filters to " + str(fCount) + " files in " + str(directory))
