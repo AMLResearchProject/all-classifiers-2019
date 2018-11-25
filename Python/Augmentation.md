@@ -1,7 +1,7 @@
 # AML Classifier Data Augmentation
 <img style="width: 100%;" src="../Media/Images/Banner-Social.jpg" title="Peter Moss Acute Myeloid Leukemia Research Project">
 
-The AML Classifier Data Augmentation program applies filters to the original dataset and increasing the amount of training / test data. The AML Classifier Data Augmentation program is part of the computer vision research and development for the Peter Moss Acute Myeloid Leukemia Research Project. 
+The AML Classifier Data Augmentation program applies filters to the original dataset and increases the amount of training / test data. The AML Classifier Data Augmentation program is part of the computer vision research and development for the Peter Moss Acute Myeloid Leukemia Research Project. 
 
 I decided to use some augmentation proposals outlined in Leukemia Blood Cell Image Classification Using Convolutional Neural Network by T. T. P. Thanh, Caleb Vununu, Sukhrob Atoev, Suk-Hwan Lee, and Ki-Ryong Kwon. The augmentations I chose were grayscaling, histogram equalization, horizontal and vertical reflection and gaussian blur to start with. Using these techniques so far I have been able to increase a dataset from 49 positive and 49 negative images to 270 positive and 270 negative, with more augmentations to experiment with.
 
