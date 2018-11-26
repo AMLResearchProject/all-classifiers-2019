@@ -5,7 +5,7 @@ The Acute Myeloid Leukemia Research Python Classifier is a pure Python Convoluti
 
 To run your own classifier you should follow the tutorials and Notebooks linked below:
 
-- [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker"): [Python Data augmentation](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/Python/Augmentation.md "Python Data augmentation") - A Python tutorial and Notebook for applying filters to the original dataset and increasing the amount of training / test data.
+- [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker"): [Python Data augmentation](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/Python/Augmentation.ipynb "Python Data augmentation") - A Python tutorial and Notebook for applying filters to the original dataset and increasing the amount of training / test data.
 
 # Research papers followed
 The papers that this part of the project is based on were provided by project team member, Ho Leung, Associate Professor of Biochemistry & Molecular Biophysics at Kansas State University. 
