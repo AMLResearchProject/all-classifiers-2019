@@ -13,7 +13,7 @@ The AML Research Project is being organized and developed by a team of volunteer
 # Projects
 Below you will find a list of computer vision projects that are part of this repo:
 
-- [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker"): [Python Data augmentation](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/Python/Augmentation.md "Python Data augmentation") - A Python program for applying filters to the original dataset and increasing the amount of training / test data. 
+- [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker"): [Python Data augmentation](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/Python/Augmentation.ipynb "Python Data augmentation") - A Python program for applying filters to the original dataset and increasing the amount of training / test data. 
 
 # Research papers followed
 The papers that this part of the project is based on were provided by project team member, Ho Leung, Associate Professor of Biochemistry & Molecular Biophysics at Kansas State University. 
