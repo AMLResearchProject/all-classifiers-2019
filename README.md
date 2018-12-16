@@ -10,14 +10,26 @@ The AML Research Project is being organized and developed by a team of volunteer
 | [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker")  | Bigfinite IoT Network Engineer & Intel Software Innovator  |
 | [Ho Leung Ng](https://github.com/holeung "Ho  Leung Ng")   | Kansas State University, Dept. Biochemistry & Molecular Biophysics |
 | [John LaRocco](https://github.com/holeung "John LaRocco")   | Former Humai Head of Engineering, LA, USA |
-| [Amita Kapoor](https://github.com/amita-kapoor "Amita Kapoor") | Associate Professor @ Delhi University, New Dehli, India |
+| [Amita Kapoor](https://github.com/amita-kapoor "Amita Kapoor") | Associate Professor @ Delhi University, New Dehli, India | 
 
-# Projects
-Below you will find a list of computer vision projects that are part of this repo:
+# Repo Projects
+Below you will find a list of projects that are part of this repo:
 
-| Project  | Description | Author | 
-| ------------- | ------------- | ------------- |
-| [Python Data augmentation](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/Python/Augmentation.ipynb "Python Data augmentation") | A Python program for applying filters to the original dataset and increasing the amount of training / test data.  | [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker"): Bigfinite IoT Network Engineer & Intel Software Innovator |
+| Project  | Description |
+| ------------- | ------------- | 
+| [Python](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/Python "Python") | Classifiers programmed in Python | 
+| [Java](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/Python "Java") | Classifiers programmed in Java | 
+
+# Python Projects
+Below you will find a list of Python projects that are part of this repo:
+
+| Project  | Description |
+| ------------- | ------------- |
+| [Python Caffe](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/_Cafe "Python Caffe") | Classifiers programmed with Caffe in Python | 
+| [Python Movidius](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/_Movidius "Python Movidius") | Classifiers programmed for Movidius in Python | 
+| [Python OpenVino](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/_OpenVino "Python Caffe") | Classifiers programmed with OpenVino in Python | 
+| [Python Tensorflow](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/Python "Python Tensorflow") | Classifiers programmed with Tensorflow in Python | 
+| [Python Data augmentation](https://github.com/AdamMiltonBarker/AML-Classifiers/tree/master/Python/ "Python Data augmentation") | A Python program for applying filters to the original dataset and increasing the amount of training / test data.
 
 # Research papers followed
 Research papers used in this part of the project were shared by project team member, [Ho Leung Ng](https://github.com/holeung "Ho  Leung Ng"), Associate Professor of Biochemistry & Molecular Biophysics at Kansas State University. 
