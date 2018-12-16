@@ -5,7 +5,7 @@ The AML (Acute Myeloid Leukemia) Python Classifier is a pure Python Convolutiona
 
 | Project  | Description | Author | 
 | ------------- | ------------- | ------------- |
-| [Python Data Augmentation](https://github.com/AdamMiltonBarker/AML-Classifiers/tree/master/Python/ "Python Data Augmentation") | A Python tutorial and Notebook for applying filters to the original dataset and increasing the amount of training / test data. | [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") |
+| [Python Data Augmentation](https://github.com/AdamMiltonBarker/AML-Classifiers/blob/master/Python/Augmentation.ipynb "Python Data Augmentation") | A Python tutorial and Notebook for applying filters to the original dataset and increasing the amount of training / test data. | [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") |
 
 # Research papers followed
 Research papers used in this part of the project were shared by project team member, [Ho Leung Ng](https://github.com/holeung "Ho  Leung Ng"), Associate Professor of Biochemistry & Molecular Biophysics at Kansas State University. 
