@@ -17,8 +17,9 @@ Below you will find a list of projects that are part of this repo:
 
 | Project  | Description |
 | ------------- | ------------- | 
-| [Python](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/Python "Python") | Classifiers programmed in Python | 
+| [CPP](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/CPP "CPP") | Classifiers programmed in C++ | 
 | [Java](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/Python "Java") | Classifiers programmed in Java | 
+| [Python](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/Python "Python") | Classifiers programmed in Python | 
 
 # Python Projects
 Below you will find a list of Python projects that are part of this repo:
