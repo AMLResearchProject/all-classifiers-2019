@@ -10,9 +10,9 @@ The AML (Acute Myeloid Leukemia) Python Classifier is a pure Python Convolutiona
 # Research papers followed
 Research papers used in this part of the project were shared by project team member, [Ho Leung Ng](https://github.com/holeung "Ho  Leung Ng"), Associate Professor of Biochemistry & Molecular Biophysics at Kansas State University. 
 
-| Project | Paper  | Description | Link | 
-| ------------- | ------------- | ------------- | ------------- |
-| [Python Data Augmentation](https://github.com/AMLResearchProject/AML-Classifiers/tree/master/Python/Augmentation.ipynb "Python Data Augmentation") | Leukemia Blood Cell Image Classification Using Convolutional Neural Network | T. T. P. Thanh, Caleb Vununu, Sukhrob Atoev, Suk-Hwan Lee, and Ki-Ryong Kwon  | [Paper](http://www.ijcte.org/vol10/1198-H0012.pdf "Paper") |
+| Paper  | Description | Link | 
+| ------------- | ------------- | ------------- |
+| Leukemia Blood Cell Image Classification Using Convolutional Neural Network | T. T. P. Thanh, Caleb Vununu, Sukhrob Atoev, Suk-Hwan Lee, and Ki-Ryong Kwon  | [Paper](http://www.ijcte.org/vol10/1198-H0012.pdf "Paper") |
 
 # Datasets
 The [Acute Lymphoblastic Leukemia Image Database for Image Processing](https://homes.di.unimi.it/scotti/all/) dataset is used for this project. The dataset was created by [Fabio Scotti, Associate Professor Dipartimento di Informatica, Università degli Studi di Milano](https://homes.di.unimi.it/scotti/). Big thanks to Fabio for his research and time put in to creating the dataset and documentation, it is one of his personal projects. You will need to follow the steps outlined [here](https://homes.di.unimi.it/scotti/all/#download) to gain access to the dataset.
