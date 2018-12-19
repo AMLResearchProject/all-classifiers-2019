@@ -1,7 +1,9 @@
 {
-	"Settings":{
-		"TrainDir":"Model/Data/",
-		"DataFile":"Model/Data/data.h5",
-		"LabelsFile":"Model/Data/labels.h5"
+	"Settings":
+	{
+		"ImgDims": 257,
+		"TrainDir": "Model/Data/",
+		"DataFile": "Model/Data/data.h5",
+		"LabelsFile": "Model/Data/labels.h5"
 	}
 }

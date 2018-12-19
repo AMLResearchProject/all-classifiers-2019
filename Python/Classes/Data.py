@@ -30,11 +30,12 @@
 #
 ############################################################################################
 
-import os, cv2
+import os, cv2, random
 
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import ndimage
+from PIL import Image
 
 from Classes.Tools import Tools
 
@@ -51,7 +52,7 @@ class Data():
         
         self.Tools = Tools()
         self.confs = self.Tools.loadConfs()
-        self.fixed = tuple((257, 257))
+        self.fixed = tuple((self.confs["Settings"]["ImgDims"], self.confs["Settings"]["ImgDims"]))
         
     def writeImage(self, filename, image):
         
@@ -62,8 +63,24 @@ class Data():
         ###############################################################
         
         cv2.imwrite(filename, image)
+        
+    def resize(self, filePath, show = False):
+        
+        ###############################################################
+        #
+        # Writes an image based on the filepath and the image provided. 
+        #
+        ###############################################################
 
-    def grayScale(self, image, grayPath, filename, show = False):
+        image = cv2.resize(cv2.imread(filePath), self.fixed)
+        self.writeImage(filePath, image)
+        if show is True:
+            print(filePath)
+            plt.imshow(image)
+            plt.show()
+        return image
+
+    def grayScale(self, image, grayPath, show = False):
         
         ###############################################################
         #
@@ -71,15 +88,15 @@ class Data():
         #
         ###############################################################
         
-        print(grayPath)
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         self.writeImage(grayPath, gray)
         if show is True:
+            print(grayPath)
             plt.imshow(gray)
             plt.show()
         return image, gray
 
-    def equalizeHist(self, gray, histPath, filename, show = False):
+    def equalizeHist(self, gray, histPath, show = False):
         
         ###############################################################
         #
@@ -88,10 +105,10 @@ class Data():
         #
         ###############################################################
         
-        print(histPath)
         hist = cv2.equalizeHist(gray)
         self.writeImage(histPath, cv2.equalizeHist(gray))
         if show is True:
+            print(histPath)
             plt.imshow(hist)
             plt.show()
         return hist
@@ -105,16 +122,16 @@ class Data():
         #
         ###############################################################
         
-        print(horPath)
         horImg = cv2.flip(image, 0)
         self.writeImage(horPath, horImg)
         if show is True:
+            print(horPath)
             plt.imshow(horImg)
             plt.show()
-        print(verPath)
         verImg = cv2.flip( image, 1 )
         self.writeImage(verPath, verImg)
         if show is True:
+            print(verPath)
             plt.imshow(verImg)
             plt.show()
         return horImg, verImg
@@ -128,13 +145,34 @@ class Data():
         #
         ###############################################################
         
-        print(gaussianPath)
         gaussianBlur = ndimage.gaussian_filter(plt.imread(filePath), sigma=5.11)
         self.writeImage(gaussianPath, gaussianBlur)
         if show is True:
+            print(gaussianPath)
             plt.imshow(gaussianBlur)
             plt.show()
-        return gaussianBlur	
+        return gaussianBlur
+        
+    def rotation(self, path, filePath, filename, show = False): 
+        
+        ###############################################################
+        #
+        # Writes rotated copies of the image to the filepath 
+        # provided. 
+        #
+        ###############################################################
+        
+        img = Image.open(filePath)
+
+        for i in range(1, 10):
+            randDeg = random.randint(-180, 180)
+            fullPath = os.path.join(path, str(randDeg) + '-' + filename)
+            if show is True:
+                print(fullPath)
+                img.rotate(randDeg, expand=True).resize((self.confs["Settings"]["ImgDims"], self.confs["Settings"]["ImgDims"])).save(fullPath).show()
+            else:
+                print(fullPath)
+                img.rotate(randDeg, expand=True).resize((self.confs["Settings"]["ImgDims"], self.confs["Settings"]["ImgDims"])).save(fullPath)
 
     def processDataset(self):
         
@@ -148,23 +186,17 @@ class Data():
         for directory in os.listdir(self.confs["Settings"]["TrainDir"]):
             if os.path.isdir(os.path.join(self.confs["Settings"]["TrainDir"], directory)):
                 path = os.path.join(self.confs["Settings"]["TrainDir"], directory)
-                print(path)
+                sortedPath = os.path.join(self.confs["Settings"]["TrainDir"]+"augmented/", directory)
                 fCount = 0
                 for filename in os.listdir(path):
                     if filename.endswith('.jpg'):
                         filePath = os.path.join(path, filename)
-                        print(filePath)
-                        image = cv2.resize(cv2.imread(filePath), self.fixed)
-                        self.writeImage(filePath, image)
-                        grayPath = os.path.join(path, "Gray-"+filename)
-                        image, gray = self.grayScale(image, grayPath, filename, show = True)
-                        histPath = os.path.join(path, "hist-"+filename)
-                        hist = self.equalizeHist(gray, histPath, filename, show = True)
-                        horPath = os.path.join(path, "hor-"+filename)
-                        verPath = os.path.join(path, "ver-"+filename)
-                        horImg, verImg = self.reflection(image, horPath, verPath, True)
-                        gaussianPath = os.path.join(path, "gaus-"+filename)
-                        gaussianBlur = self.gaussian(filePath, gaussianPath, True)
+                        image = self.resize(filePath, True)
+                        image, gray = self.grayScale(image, os.path.join(sortedPath, "Gray-"+filename), True)
+                        hist = self.equalizeHist(gray, os.path.join(sortedPath, "Hist-"+filename), True)
+                        horImg, verImg = self.reflection(image, os.path.join(sortedPath, "Hor-"+filename), os.path.join(sortedPath, "Ver-"+filename), True)
+                        gaussianBlur = self.gaussian(filePath, os.path.join(sortedPath, "Gaus-"+filename), True)
+                        self.rotation(sortedPath, filePath, filename)
                         fCount += 1
                     else:
                         continue
