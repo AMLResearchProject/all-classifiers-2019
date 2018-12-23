@@ -1,5 +1,5 @@
 # Acute Myeloid Leukemia Python Classifier
-![Peter Moss AML Classifier Projects](../Media/Images/Banner-Social.jpg) 
+![Peter Moss AML Classifier Projects](../Media/Images/banner.png) 
 
 The AML (Acute Myeloid Leukemia) Python Classifier is a pure Python Convolutional Neural Network created using minimal 3rd party libraries / frameworks. The classifier is part of the Peter Moss AML (Acute Myeloid Leukemia) AI Research Project computer vision R&D with the focus of detection/early detection of AML.
 
