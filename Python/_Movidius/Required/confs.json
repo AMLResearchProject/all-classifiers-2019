@@ -1,0 +1,54 @@
+{
+    "Settings":
+    {
+        "Logs":
+        {
+            "DataLogDir": "Logs/Data",
+            "ClassifierLogDir": "Logs/Classifier",
+            "ClassifierLogDir": "Logs/Train"
+        }
+   },
+   "Classifier":
+    {
+        "AMLGraph": "Model/AMLGraph.pb",
+        "BatchSize": 10,
+        "BatchTestSize": 36,
+        "Classes": "Model/classes.txt",
+        "DatasetDir": "Model/Data",
+        "Epochs": 60,
+        "EpochsTest": 1,
+        "EpochsDevCloud": 40,
+        "EpochsBeforeDecay": 10,
+        "FilePattern": "200label_%s_*.tfrecord",
+        "ImageSize": 299,
+        "InceptionImagePath":"data/idc/1/",
+        "InceptionThreshold": 0.80,
+        "InceptionGraph": "Model/AML.graph",
+        "InceptionGraphDevCloud": "Model/idcdc.graph",
+        "Graph": "Model/tass.graph",
+        "Labels": "labels.txt",
+        "LearningRate": 0.0001,
+        "LearningRateDecay": 0.80,
+        "LogDir": "Model/_logs",
+        "LogDirEval": "Model/_logs_eval",
+        "NetworkPath": "",
+        "NumClasses": 2,
+        "OutputNode": "InceptionV3/Predictions/Softmax",
+        "RandomSeed": 50,
+        "Shards": 2,
+        "TestImagePath":"Model/Test",
+        "TFRecordFile": "200label",
+        "TFRecordPattern": "200label_%s_*.tfrecord",
+        "ValidationSize": 0.3,
+        "ValidIType": [
+            ".JPG",
+            ".JPEG",
+            ".PNG",
+            ".GIF",
+            ".jpg",
+            ".jpeg",
+            ".png",
+            ".gif"
+        ]
+   }
+}
