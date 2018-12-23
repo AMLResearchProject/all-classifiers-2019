@@ -73,9 +73,6 @@ class Data():
         ###############################################################
 
         image = cv2.resize(cv2.imread(filePath), self.fixed)
-        print("HERE")
-        print(filePath)
-        print(savePath)
         self.writeImage(savePath, image)
         if show is True:
             print(savePath)
