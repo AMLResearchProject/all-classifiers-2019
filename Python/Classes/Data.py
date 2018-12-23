@@ -64,7 +64,7 @@ class Data():
         
         cv2.imwrite(filename, image)
         
-    def resize(self, filePath, show = False):
+    def resize(self, filePath, savePath, show = False):
         
         ###############################################################
         #
@@ -73,9 +73,12 @@ class Data():
         ###############################################################
 
         image = cv2.resize(cv2.imread(filePath), self.fixed)
-        self.writeImage(filePath, image)
+        print("HERE")
+        print(filePath)
+        print(savePath)
+        self.writeImage(savePath, image)
         if show is True:
-            print(filePath)
+            print(savePath)
             plt.imshow(image)
             plt.show()
         return image
@@ -191,7 +194,7 @@ class Data():
                 for filename in os.listdir(path):
                     if filename.endswith('.jpg'):
                         filePath = os.path.join(path, filename)
-                        image = self.resize(filePath, True)
+                        image = self.resize(filePath, sortedPath+"/"+filename, True)
                         image, gray = self.grayScale(image, os.path.join(sortedPath, "Gray-"+filename), True)
                         hist = self.equalizeHist(gray, os.path.join(sortedPath, "Hist-"+filename), True)
                         horImg, verImg = self.reflection(image, os.path.join(sortedPath, "Hor-"+filename), os.path.join(sortedPath, "Ver-"+filename), True)
