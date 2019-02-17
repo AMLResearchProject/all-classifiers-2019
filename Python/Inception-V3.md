@@ -32,16 +32,18 @@ The Acute Myeloid/Lymphoblastic Leukemia AI Research Project Movidius NCS Classi
 In the project you will find these files in the [AML-ALL-Classifiers/Python/_Movidius/NCS/Classes](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS/Classes/) directory.
 
 ## inception_preprocessing.py
-The inception_preprocessing class provides the tools required to preprocess both training and evaluation images allowing them to be used with Inception Networks.  
+The inception_preprocessing file provides the tools required to preprocess both training and evaluation images allowing them to be used with Inception Networks.  
 __Project Location:__ [AML-ALL-Classifiers/Python/_Movidius/NCS/Classes/inception_preprocessing.py](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS/Classes/inception_preprocessing.py)
 
 ## inception_utils.py
-The inception_utils class provides utility code that is common across all Inception versions.  
+The inception_utils class file utility code that is common across all Inception versions.  
 __Project Location:__ [AML-ALL-Classifiers/Python/_Movidius/NCS/Classes/inception_utils.py](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS/Classes/inception_utils.py)
 
 ## inception_v3.py
-The inception_v3 class provides the code required to create an Inception V3 network.  
+The inception_v3 file provides the code required to create an Inception V3 network.  
 __Project Location:__ [AML-ALL-Classifiers/Python/_Movidius/NCS/Classes/inception_v3.py](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS/Classes/inception_v3.py)
+
+In this file you will find the __inception_v3__ function provided by Tensorflow, this function produces the exact Inception model from [Rethinking the Inception Architecture for Computer Vision](http://arxiv.org/abs/1512.00567) written by Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, Jonathon Shlens, Zbigniew Wojna.
 
 # Contributing
 We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.
