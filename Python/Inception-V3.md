@@ -1,6 +1,6 @@
 # Inception V3 Deep Learing Convolutional Architecture 
 ![Peter Moss Acute Myeloid/Lymphoblastic Leukemia Detection System](../Media/Images/banner.png)
-Inception V3 by Google is the 3rd version in a series of Deep Learning Convolutional Architectures. Inception V3 was trained using a dataset of 1000 classes from the original ImageNet dataset which was trained with over 1 million training images. 
+Inception V3 by Google is the 3rd version in a series of Deep Learning Convolutional Architectures. Inception V3 was trained using a dataset of 1000 classes from the original ImageNet dataset which was trained with over 1 million training images. Inception V3 was trained for the ImageNet Large Visual Recognition Challenge where it was a first runner up.
 
 This README will take you through some information about Inception V3, transfer learning, and how we use these tools in the Acute Myeloid/Lymphoblastic Leukemia AI Research Project.
 
