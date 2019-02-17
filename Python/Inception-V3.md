@@ -45,6 +45,9 @@ __Project Location:__ [AML-ALL-Classifiers/Python/_Movidius/NCS/Classes/inceptio
 
 In this file you will find the __inception_v3__ function provided by Tensorflow, this function produces the exact Inception model from [Rethinking the Inception Architecture for Computer Vision](http://arxiv.org/abs/1512.00567) written by Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, Jonathon Shlens, Zbigniew Wojna.
 
+## Model Freezing
+In projects that use Intel Movidius NCS/NC2, it is required to freeze the model, a technique mostly used for deploying Tensorflow models to mobile devices. Freezing a model basically removes unrequired/unused nodes such as training specific nodes etc. To find out more about model freezing, you can visit the [Preparing models for mobile deployment](https://www.tensorflow.org/lite/tfmobile/prepare_models) Tensorflow tutorial, to find the related project code you can check out the __Movidius NCS training program__. The training program uses TF-Slim to produce a graph and uses __graph_util.convert_variables_to_constants__ to create a Tensorflow GraphDef, saves it as a __.pb__ file in the model directory. 
+
 # Contributing
 We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.
 
