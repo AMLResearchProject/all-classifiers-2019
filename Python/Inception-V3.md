@@ -26,8 +26,8 @@ Github: [TensorFlow-Slim image classification model library](https://github.com/
 The Acute Myeloid/Lymphoblastic Leukemia AI Research Project Movidius NCS Classifier uses the following classes from the TensorFlow-Slim image classification model library:
 
 - [inception_preprocessing.py](https://github.com/tensorflow/models/blob/master/research/slim/preprocessing/inception_preprocessing.py)
-- [inception_utils.py](https://github.com/tensorflow/models/blob/master/research/slim/preprocessing/inception_utils.py)
-- [inception_v3.py](https://github.com/tensorflow/models/blob/master/research/slim/preprocessing/inception_v3.py)
+- [inception_utils.py](https://github.com/tensorflow/models/blob/master/research/slim/nets/inception_utils.py)
+- [inception_v3.py](https://github.com/tensorflow/models/blob/master/research/slim/nets/inception_v3.py)
 
 In the project you will find these files in the [AML-ALL-Classifiers/Python/_Movidius/NCS/Classes](https://github.com/AdamMiltonBarker/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS/Classes/) directory.
 
