@@ -9,7 +9,7 @@ The [Acute Myeloid/Lymphoblastic Leukemia Classifier Data Augmentation](https://
 
 | Project  | Description | Status |
 | ------------- | ------------- |  ------------- | 
-| [Movidius](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Movidius/ "Movidius") | AML/ALL classifiers created using Intel Movidius. | COMPLETED | 
+| [Movidius](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Movidius/ "Movidius") | AML/ALL classifiers created using Intel Movidius. | Development | 
 | [OpenVino](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_OpenVino/ "OpenVino") | AML/ALL classifiers created using Intel OpenVino. | Development | 
 | [Tensorflow](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Tensorflow/ "Tensorflow") | AML/ALL classifiers created using the Tensorflow framework. | Development | 
 | [Caffe](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Caffe/ "Caffe") | AML/ALL classifiers created using the Caffe framework. | Development | 
