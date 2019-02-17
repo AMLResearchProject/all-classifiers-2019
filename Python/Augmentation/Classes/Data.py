@@ -2,7 +2,7 @@
 #
 # The MIT License (MIT)
 # 
-# Peter Moss Acute Myeloid Leukemia Research Project
+# Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research Project
 # Copyright (C) 2018 Adam Milton-Barker (AdamMiltonBarker.com)
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,10 +23,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 #
-# Title:         Acute Myeloid Leukemia Classifier Data Tools
-# Description:   Tools for data augmentation used with the Acute Myeloid Leukemia Classifier.
+# Title:         Acute Myeloid Leukemia Classifier Data Helpers
+# Description:   Helpers for data augmentation used with the Acute Myeloid Leukemia Classifier.
 # Configuration: required/confs.json
-# Last Modified: 2018-11-24
+# Last Modified: 2019-02-16
 #
 ############################################################################################
 
@@ -37,7 +37,7 @@ import matplotlib.pyplot as plt
 from scipy import ndimage
 from PIL import Image
 
-from Classes.Tools import Tools
+from Classes.Helpers import Helpers
 
 class Data():
     
@@ -50,8 +50,8 @@ class Data():
         #
         ###############################################################
         
-        self.Tools = Tools()
-        self.confs = self.Tools.loadConfs()
+        self.Helpers = Helpers()
+        self.confs = self.Helpers.loadConfs()
         self.fixed = tuple((self.confs["Settings"]["ImgDims"], self.confs["Settings"]["ImgDims"]))
         
     def writeImage(self, filename, image):
@@ -200,4 +200,4 @@ class Data():
                         fCount += 1
                     else:
                         continue
-                print(" AML-DNN: " + self.Tools.currentDateTime() + "  - Added filters to " + str(fCount) + " files in " + str(directory))
+                print(" AML-DNN: " + self.Helpers.currentDateTime() + "  - Added filters to " + str(fCount) + " files in " + str(directory))

@@ -2,7 +2,7 @@
 #
 # The MIT License (MIT)
 # 
-# Peter Moss Acute Myeloid Leukemia Research Project
+# Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research Project
 # Copyright (C) 2018 Adam Milton-Barker (AdamMiltonBarker.com)
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,7 +26,7 @@
 # Title:         Acute Myeloid Leukemia Classifier Tools
 # Description:   Common tools used by the Acute Myeloid Leukemia Classifier.
 # Configuration: required/confs.json
-# Last Modified: 2018-11-24
+# Last Modified: 2019-02-16
 #
 ############################################################################################
 
@@ -68,7 +68,7 @@ class Helpers():
         #
         ###############################################################
         
-        return datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
     def timerStart(self):
         
