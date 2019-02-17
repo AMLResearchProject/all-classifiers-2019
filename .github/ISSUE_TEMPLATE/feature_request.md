@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Please complete this form for all feature proposals
+about: Please provide all requested information when filling out a feature proposal.
 title: ''
 labels: ''
 assignees: ''
