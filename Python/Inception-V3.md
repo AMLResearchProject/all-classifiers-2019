@@ -37,7 +37,7 @@ Project Location: [AML-ALL-Classifiers/Python/_Movidius/NCS/Classes/inception_pr
 
 ## inception_utils.py
 The inception_utils class provides utility code that is common across all Inception versions.  
-[AML-ALL-Classifiers/Python/_Movidius/NCS/Classes/inception_utils.py](https://github.com/AdamMiltonBarker/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS/Classes/inception_utils.py)
+Project Location: [AML-ALL-Classifiers/Python/_Movidius/NCS/Classes/inception_utils.py](https://github.com/AdamMiltonBarker/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS/Classes/inception_utils.py)
 
 ## inception_v3.py
 The inception_v3 class provides the code required to create an Inception V3 network.  
