@@ -31,6 +31,17 @@ The Acute Myeloid/Lymphoblastic Leukemia AI Research Project Movidius NCS Classi
 
 In the project you will find these files in the [AML-ALL-Classifiers/Python/_Movidius/NCS/Classes](https://github.com/AdamMiltonBarker/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS/Classes/) directory.
 
+## inception_preprocessing.py
+[AML-ALL-Classifiers/Python/_Movidius/NCS/Classes/inception_preprocessing.py](https://github.com/AdamMiltonBarker/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS/Classes/inception_preprocessing.py)
+The inception_preprocessing class provides the tools required to preprocess both training and evaluation images allowing them to be used with Inception Networks.
+
+## inception_utils.py
+[AML-ALL-Classifiers/Python/_Movidius/NCS/Classes/inception_utils.py](https://github.com/AdamMiltonBarker/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS/Classes/inception_utils.py)
+
+## inception_v3.py
+[AML-ALL-Classifiers/Python/_Movidius/NCS/Classes/inception_v3.py](https://github.com/AdamMiltonBarker/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS/Classes/inception_v3.py)
+The v class provides the code required to create an Inception V3 network.
+
 # Contributing
 We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.
 
