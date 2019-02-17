@@ -7,7 +7,7 @@ The classifier can currently be run by using a local configuration file, but you
 
 | Project  | Description | Author | 
 | ------------- | ------------- | ------------- |
-| [Data Augmentation Using Python](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Augmentation/Augmentation.ipynb "Data Augmentation Using Python") | A Python tutorial and Jupyter Notebook for applying filters to datasets to increase the amount of training / test data. | [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") |
+| [Data Augmentation Using Python](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/Augmentation/Augmentation.ipynb "Data Augmentation Using Python") | A Python tutorial and Jupyter Notebook for applying filters to datasets to increase the amount of training / test data. | [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") |
 
 # Research papers followed
 Research papers used in this part of the project were shared by project team member, [Ho Leung Ng](https://github.com/holeung "Ho  Leung Ng"), Associate Professor of Biochemistry & Molecular Biophysics at Kansas State University.
