@@ -1,15 +1,19 @@
-# Inception V3
+# Inception V3 Deep Learing Convolutional Architecture 
 ![Peter Moss Acute Myeloid/Lymphoblastic Leukemia Detection System](../Media/Images/banner.png)
-The Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research Projects uses a variety of different pretrained models including Inception V3. 
+Inception V3 by Google is the 3rd version in a series of Deep Learning Convolutional Architectures. Inception V3 was trained using a dataset of 1000 classes from the original ImageNet dataset which was trained with over 1 million training images. 
+
+This README will take you through some information about Inception V3, transfer learning, and how we use these tools in the Acute Myeloid/Lymphoblastic Leukemia AI Research Project.
 
 # Convolutional Neural Networks
-![Inception v3 architecture](../Media/Images/CNN.jpg)
+![Inception v3 architecture](../Media/Images/CNN.jpg)  
+
 Figure 1. Inception v3 architecture ([Source](https://github.com/tensorflow/models/tree/master/research/inception)).
 
 Convolutional neural networks are a type of deep learning neural network. These types of neural nets are widely used in computer vision and have pushed the capabilities of computer vision over the last few years, performing exceptionally better than older, more traditional neural networks; however, studies show that there are trade-offs related to training times and accuracy.
 
 # Transfer Learning
-![Inception v3 model diagram](../Media/Images/Transfer-Learning.jpg)
+![Inception v3 model diagram](../Media/Images/Transfer-Learning.jpg)  
+
 Figure 2. Inception V3 Transfer Learning ([Source](https://github.com/Hvass-Labs/TensorFlow-Tutorials)).
 
 Transfer learning allows you to retrain the final layer of an existing model, resulting in a significant decrease in not only training time, but also the size of the dataset required. One of the most famous models that can be used for transfer learning is the Inception V3 model created by Google This model was trained on thousands of images from 1,001 classes on some very powerful devices. Being able to retrain the final layer means that you can maintain the knowledge that the model had learned during its original training and apply it to your smaller dataset, resulting in highly accurate classifications without the need for extensive training and computational power.
