@@ -5,7 +5,9 @@ The Peter Moss Acute Myeloid/Lymphoblastic Leukemia Python Movidius classifiers 
 # Python Movidius Projects
 
 | Project  | Description | Status |
-| ------------- | ------------- |  ------------- |
+| ------------- | ------------- |  ------------- | 
+| [Movidius NCS](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS/ "Movidius NCS") | AML/ALL classifiers created using Intel Movidius NCS. | COMPLETED |
+| [Movidius NCS2](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS2/ "Movidius NCS2") | AML/ALL classifiers created using Intel Movidius NCS2 & OpenVino. | Development |
 
 # Contributing
 We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.
