@@ -33,15 +33,15 @@ In the project you will find these files in the [AML-ALL-Classifiers/Python/_Mov
 
 ## inception_preprocessing.py
 The inception_preprocessing class provides the tools required to preprocess both training and evaluation images allowing them to be used with Inception Networks.  
-Project Location: [AML-ALL-Classifiers/Python/_Movidius/NCS/Classes/inception_preprocessing.py](https://github.com/AdamMiltonBarker/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS/Classes/inception_preprocessing.py)
+__Project Location:__ [AML-ALL-Classifiers/Python/_Movidius/NCS/Classes/inception_preprocessing.py](https://github.com/AdamMiltonBarker/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS/Classes/inception_preprocessing.py)
 
 ## inception_utils.py
 The inception_utils class provides utility code that is common across all Inception versions.  
-Project Location: [AML-ALL-Classifiers/Python/_Movidius/NCS/Classes/inception_utils.py](https://github.com/AdamMiltonBarker/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS/Classes/inception_utils.py)
+__Project Location:__ [AML-ALL-Classifiers/Python/_Movidius/NCS/Classes/inception_utils.py](https://github.com/AdamMiltonBarker/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS/Classes/inception_utils.py)
 
 ## inception_v3.py
 The inception_v3 class provides the code required to create an Inception V3 network.  
-Project Location: [AML-ALL-Classifiers/Python/_Movidius/NCS/Classes/inception_v3.py](https://github.com/AdamMiltonBarker/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS/Classes/inception_v3.py)
+__Project Location:__ [AML-ALL-Classifiers/Python/_Movidius/NCS/Classes/inception_v3.py](https://github.com/AdamMiltonBarker/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS/Classes/inception_v3.py)
 
 # Contributing
 We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.
