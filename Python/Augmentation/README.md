@@ -7,7 +7,7 @@ The augmentation program can currently be run by using a local configuration fil
 
 | Project  | Description | Author | 
 | ------------- | ------------- | ------------- |
-| [Data Augmentation Using Python](https://github.com/AMLResearchProject/AML-ALL-Detection-System/tree/master/Augmentation/Augmentation.ipynb "Data Augmentation Using Python") | A Python tutorial and Jupyter Notebook for applying filters to datasets to increase the amount of training / test data. | [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") |
+| [Data Augmentation Using Python](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Augmentation/Augmentation.ipynb "Data Augmentation Using Python") | A Python tutorial and Jupyter Notebook for applying filters to datasets to increase the amount of training / test data. | [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") |
 
 # Research papers followed
 Research papers used in this part of the project were shared by project team member, [Ho Leung Ng](https://github.com/holeung "Ho  Leung Ng"), Associate Professor of Biochemistry & Molecular Biophysics at Kansas State University.
@@ -33,13 +33,13 @@ The [Acute Lymphoblastic Leukemia Image Database for Image Processing](https://h
 Below is a guide on how to install the augmentation program on your device, as mentioned above the program has been tested with Ubuntu 18.04 & 16.04, but may work on other versions of Linux and possibly Windows.
 
 ## Clone the repository
-First of all you should clone the [AML/ALL Detection System](https://github.com/AMLResearchProject/AML-ALL-Detection-System/ "AML/ALL Detection System") repo to your device. To do this can you navigate to the location you want to download to on your device using terminal  (cd Your/Download/Location), and then use the following commands:
+First of all you should clone the [AML/ALL Detection System](https://github.com/AMLResearchProject/AML-ALL-Classifiers/ "AML/ALL Detection System") repo to your device. To do this can you navigate to the location you want to download to on your device using terminal  (cd Your/Download/Location), and then use the following commands:
 
 ```
-  $ git clone https://github.com/AMLResearchProject/AML-ALL-Detection-System.git
+  $ git clone https://github.com/AMLResearchProject/AML-ALL-Classifiers.git
 ```
 
-Once you have used the command above you will see a directory called __AML-ALL-Detection-System__ in the location you chose to download the repo to. In terminal, navigate to the __AML-ALL-Detection-System/Augmentation__ and use the following command to install the required software for this program. 
+Once you have used the command above you will see a directory called __AML-ALL-Classifiers__ in the location you chose to download the repo to. In terminal, navigate to the __AML-ALL-Classifiers/Augmentation__ and use the following command to install the required software for this program. 
 
 ```
  $ sh Setup.sh
@@ -64,7 +64,7 @@ You need to make sure you have Jupyter Notebook installed, you can use the follo
   $ pip3 install --upgrade pip
   $ pip3 install jupyter
 ```
-Once you have completed the above, make sure you are in the __AML-ALL-Detection-System/Augmentation__ directory and use the following commands to start your server, a URL will be shown in your terminal which will point to your Juupyter Notebook server with the required authentication details in the URL paramaters.
+Once you have completed the above, make sure you are in the __AML-ALL-Classifiers/Augmentation__ directory and use the following commands to start your server, a URL will be shown in your terminal which will point to your Juupyter Notebook server with the required authentication details in the URL paramaters.
 
 Below you would replace __###.###.#.##__ with local IP address of your device.
 
@@ -72,7 +72,7 @@ Below you would replace __###.###.#.##__ with local IP address of your device.
   $ jupyter notebook --ip ###.###.#.##
 ```
 
-Using the URL provided to you in the above step, you should be able to access a copy of this directory hosted on your own device. From here you can navigate the project files and source code, you need to navigate to the __AML-ALL-Detection-System/Augmentation/Augmentation.ipynb__ file on your own device which will take you to the second part of this tutorial. If you get stuck with anything in the above or following tutorial, please use the repository [issues](https://github.com/AMLResearchProject/AML-ALL-Detection-System/issues "issues") and fill out the request information.
+Using the URL provided to you in the above step, you should be able to access a copy of this directory hosted on your own device. From here you can navigate the project files and source code, you need to navigate to the __AML-ALL-Classifiers/Augmentation/Augmentation.ipynb__ file on your own device which will take you to the second part of this tutorial. If you get stuck with anything in the above or following tutorial, please use the repository [issues](https://github.com/AMLResearchProject/AML-ALL-Classifiers/issues "issues") and fill out the request information.
 
 ## Run locally
 If you would like to run the program locally you can navigate to the Augmentation directory and use the following command:
@@ -84,19 +84,19 @@ If you would like to run the program locally you can navigate to the Augmentatio
 # Your augmented dataset
 If you head to your __Model/Data/__ directory you will notice the augmented directory. Inside the augmented directory you will find 0 (negative) and 1 (postive) directories including resized copies of the original along with Grayscaled, Histogram Equalized, Reflected, Gaussian Blurred and rotated copies.
 
-Using data augmentation I was able to increase the dataset from 39 images per class to 624 per class. This dataset will be used in the [AML/ALL Movidius NCS Classifier](https://github.com/AMLResearchProject/AML-ALL-Detection-System/tree/master/Classifiers/Movidius/NCS).
+Using data augmentation I was able to increase the dataset from 39 images per class to 624 per class. This dataset will be used in the [AML/ALL Movidius NCS Classifier](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Classifiers/Movidius/NCS).
 
 # Contributing
-We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-ALL-Detection-System/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.
+We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.
 
 # Versioning
-We use SemVer for versioning. For the versions available, see [Releases](https://github.com/AMLResearchProject/AML-ALL-Detection-System/releases "Releases").
+We use SemVer for versioning. For the versions available, see [Releases](https://github.com/AMLResearchProject/AML-ALL-Classifiers/releases "Releases").
 
 # License
-This project is licensed under the **MIT License** - see the [LICENSE](https://github.com/AMLResearchProject/AML-ALL-Detection-System/blob/master/LICENSE "LICENSE") file for details.
+This project is licensed under the **MIT License** - see the [LICENSE](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/LICENSE "LICENSE") file for details.
 
 # Bugs/Issues
-We use the [repo issues](https://github.com/AMLResearchProject/AML-ALL-Detection-System/issues "repo issues") to track bugs and general requests related to using this project. 
+We use the [repo issues](https://github.com/AMLResearchProject/AML-ALL-Classifiers/issues "repo issues") to track bugs and general requests related to using this project. 
 
 # Repository Manager
 Adam is a [BigFinite](https://www.bigfinite.com "BigFinite") IoT Network Engineer, part of the team that works on the core IoT software. In his spare time he is an [Intel Software Innovator](https://software.intel.com/en-us/intel-software-innovators/overview "Intel Software Innovator") in the fields of Internet of Things, Artificial Intelligence and Virtual Reality.
