@@ -250,7 +250,7 @@ class Data():
                         hist = self.equalizeHist(gray, os.path.join(sortedPath, "Hist-"+filename), False)
                         
                         horImg, verImg = self.reflection(image, os.path.join(sortedPath, "Hor-"+filename), 
-                                                         os.path.join(sortedPath, "Ver-"+filename), False)\
+                                                         os.path.join(sortedPath, "Ver-"+filename), False)
                         
                         gaussianBlur = self.gaussian(filePath, os.path.join(sortedPath, "Gaus-"+filename), False)
                         
