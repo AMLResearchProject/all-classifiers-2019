@@ -101,4 +101,4 @@ We use the [repo issues](https://github.com/AMLResearchProject/AML-ALL-Classifie
 # Repository Manager
 Adam is a [BigFinite](https://www.bigfinite.com "BigFinite") IoT Network Engineer, part of the team that works on the core IoT software. In his spare time he is an [Intel Software Innovator](https://software.intel.com/en-us/intel-software-innovators/overview "Intel Software Innovator") in the fields of Internet of Things, Artificial Intelligence and Virtual Reality.
 
-[![Adam Milton-Barker: BigFinte IoT Network Engineer & Intel® Software Innovator](../Media/Images/Adam-Milton-Barker.jpg)](https://github.com/AdamMiltonBarker)
+[![Adam Milton-Barker: BigFinte IoT Network Engineer & Intel® Software Innovator](../../Media/Images/Adam-Milton-Barker.jpg)](https://github.com/AdamMiltonBarker)
