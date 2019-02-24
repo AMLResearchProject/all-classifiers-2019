@@ -183,7 +183,22 @@ class Data():
         if show is True:
             plt.imshow(gaussianBlur)
             plt.show()
+
         return gaussianBlur
+
+    def translate(self, image, translatedPath, show = False):
+
+        y, x, c = image.shape
+        translated = cv2.warpAffine(image, np.float32([[1, 0, 84], [0, 1, 56]]), (x, y))
+        self.writeImage(translatedPath, translated)
+        self.filesMade += 1
+        print("Translated image written to: " + translatedPath)
+
+        if show is True:
+            plt.imshow(translated)
+            plt.show()
+
+        return translated
         
     def rotation(self, path, filePath, filename, show = False): 
         
@@ -196,7 +211,7 @@ class Data():
         
         img = Image.open(filePath)
 
-        for i in range(0, 10):
+        for i in range(0, 20):
             randDeg = random.randint(-180, 180)
             fullPath = os.path.join(path, str(randDeg) + '-' + str(i) + '-' + filename)
 
@@ -210,8 +225,6 @@ class Data():
                 print("Rotated image written to: " + fullPath)
             except:
                 print("File was not written! "+filename)
-
-            time.sleep(1)
 
     def processDataset(self):
         
@@ -243,8 +256,9 @@ class Data():
                     if filename.endswith('.jpg'):
                         
                         filePath = os.path.join(path, filename)
+                        fileSortedPath = sortedPath+"/"+filename
                         
-                        image = self.resize(filePath, sortedPath+"/"+filename, False)
+                        image = self.resize(filePath, fileSortedPath, False)
                         image, gray = self.grayScale(image, os.path.join(sortedPath, "Gray-"+filename), False)
                         
                         hist = self.equalizeHist(gray, os.path.join(sortedPath, "Hist-"+filename), False)
@@ -252,9 +266,11 @@ class Data():
                         horImg, verImg = self.reflection(image, os.path.join(sortedPath, "Hor-"+filename), 
                                                          os.path.join(sortedPath, "Ver-"+filename), False)
                         
-                        gaussianBlur = self.gaussian(filePath, os.path.join(sortedPath, "Gaus-"+filename), False)
+                        gaussianBlur = self.gaussian(fileSortedPath, os.path.join(sortedPath, "Gaus-"+filename), False)
+
+                        translated = self.translate(image, os.path.join(sortedPath, "Trans-"+filename))
                         
-                        self.rotation(sortedPath, filePath, filename)
+                        self.rotation(sortedPath, fileSortedPath, filename)
                         fCount += 1
                         print("Total augmented files created so far " + str(self.filesMade))
                         print("")
