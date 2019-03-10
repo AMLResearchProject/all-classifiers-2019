@@ -25,7 +25,7 @@
 #
 # Title:         Caffe Acute Lymphoblastic Leukemia CNN Info
 # Description:   Used to view info Caffe Acute Lymphoblastic Leukemia CNN
-# Configuration: required/confs.json
+# Configuration: Required/Confs.json
 # Last Modified: 2019-03-10
 #
 ############################################################################################
@@ -41,15 +41,12 @@ from Classes.Helpers import Helpers
 class allCNN():
 
     def __init__(self):
+
+        """
+        Sets up all default requirements and placeholders 
+        needed for the Caffe Acute Lymphoblastic Leukemia CNN.
+        """
         
-        ###############################################################
-        #
-        # Sets up all default requirements and placeholders 
-        # needed for the Caffe Acute Lymphoblastic Leukemia CNN.
-        #
-        ###############################################################
-        
-        # Load Helper functions
         self.Helpers = Helpers()
         self.confs = self.Helpers.loadConfs()
         self.logFile = self.Helpers.setLogFile(self.confs["Settings"]["Logs"]["allCNN"])
@@ -57,105 +54,110 @@ class allCNN():
         self.Helpers.logMessage(self.logFile, "allCNN", "Status", "Init complete")
 
     def loadCaffeNet(self):
-        
-        ###############################################################
-        #
-        # Loads the Caffe network using prototxt layer definition.
-        #
-        ###############################################################
+
+        """
+        Loads the Caffe network using prototxt layer definition.
+        """
         
         self.net = caffe.Net(self.confs["Settings"]["Classifier"]["layerFile"], caffe.TEST)
         
         self.Helpers.logMessage(self.logFile, "allCNN", "Status", "Caffe net initialized")
 
     def printDetails(self):
+
+        """
+        Prints and logs input, blob and parameter info.
+        """
         
-        ###############################################################
-        #
-        # Prints and logs input, blob and parameter info.
-        #
-        ###############################################################
-        
+        # Prints the Net Inputs
         self.Helpers.logMessage(self.logFile, "allCNN", "Net Inputs", "See below")
         print(self.net.inputs)
+        
+        # Prints the Net Blobs
         self.Helpers.logMessage(self.logFile, "allCNN", "Net Blobs", "See below")
         print(self.net.blobs)
+        
+        # Prints the Net Params
         self.Helpers.logMessage(self.logFile, "allCNN", "Net Params", "See below")
         print(self.net.params)
 
     def writeOutputImages(self, image):
-        
-        ###############################################################
-        #
-        # Prints input, blob and parameter info.
-        #
-        ###############################################################
 
+        """
+        Writes the output images for each neuron in the first convolution layer.
+        """
+
+        # Transposes the input (50,50,3) -> (3,50,50)
         inp = np.transpose(cv2.imread(image))
+
+        # Reshape the data blob
         self.net.blobs['data'].reshape(1, *inp.shape)
         self.net.blobs['data'].data[...] = inp
+        
+        # Passes the input data through the network to compute the output
         self.net.forward()
 
+        # Loops through each neuron in the first convolution layer and saves the images in that neuron
         for i in range(30):
-            cv2.imwrite(self.confs["Settings"]["Classifier"]["dataDir"] + self.confs["Settings"]["Classifier"]["infoOutDir"] + 'out_' + str(i) + '.jpg', 255 * self.net.blobs['conv1'].data[0,i])
+            cv2.imwrite(self.confs["Settings"]["Classifier"]["dataDir"] + self.confs["Settings"]["Classifier"]["infoOutDir"] + 'out_' + str(i) + '.jpg', 
+                        255 * self.net.blobs['conv1'].data[0,i])
 
-        self.Helpers.logMessage(self.logFile, "allCNN", "Output Images", "Output images written to " + self.confs["Settings"]["Classifier"]["dataDir"] + self.confs["Settings"]["Classifier"]["infoOutDir"])
+        self.Helpers.logMessage(self.logFile, 
+                                "allCNN", 
+                                "Output Images", 
+                                "Output images written to " + self.confs["Settings"]["Classifier"]["dataDir"] + self.confs["Settings"]["Classifier"]["infoOutDir"])
 
     def saveCaffeNet(self):
-        
-        ###############################################################
-        #
-        # Saves our Caffe network.
-        #
-        ###############################################################
+
+        """
+        Saves our Caffe network.
+        """
 
         self.net.save(self.confs["Settings"]["Classifier"]["modelFile"])
         
-        self.Helpers.logMessage(self.logFile, "allCNN", "Status", "Caffe net saved")
+        self.Helpers.logMessage(self.logFile, 
+                                "allCNN", 
+                                "Status", 
+                                "Caffe net saved")
 
 allCNN = allCNN()
 
 def main(argv):
 
     if(len(argv) < 1):
-        
-        ###############################################################
-        #
-        # Incorrect arguments size.
-        #
-        ###############################################################
 
-        allCNN.Helpers.logMessage(allCNN.logFile, "allCNN", "Arguments", "Please provide NetworkInfo or Outputs argument")
+        """
+        Incorrect arguments size.
+        """
+
+        allCNN.Helpers.logMessage(allCNN.logFile, 
+                                  "allCNN", 
+                                  "Arguments", 
+                                  "Please provide NetworkInfo or Outputs argument")
 
     elif argv[0] == "NetworkInfo":
-        
-        ###############################################################
-        #
-        # Provides information about our Caffe network.
-        #
-        ###############################################################
+
+        """
+        Provides information about our Caffe network.
+        """
 
         allCNN.loadCaffeNet()
         allCNN.printDetails()
 
     elif argv[0] == "Outputs":
-        
-        ###############################################################
-        #
-        # Plots the outputs of each neuron as images.
-        #
-        ###############################################################
+
+        """
+        Plots the outputs of each neuron as images.
+        """
 
         allCNN.loadCaffeNet()
         allCNN.writeOutputImages(allCNN.confs["Settings"]["Classifier"]["dataDir"] + allCNN.confs["Settings"]["Classifier"]["dataTestDir"] + allCNN.confs["Settings"]["Classifier"]["infoTestImage"])
 
     elif argv[0] == "Save":
-        
-        ###############################################################
-        #
-        # Saves our Caffe network.
-        #
-        ###############################################################
+
+        """
+        Saves our Caffe network.
+        """
 
         allCNN.loadCaffeNet()
         allCNN.saveCaffeNet()

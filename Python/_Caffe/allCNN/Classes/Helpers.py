@@ -23,9 +23,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 #
-# Title:         Caffe Acute Lymphoblastic Leukemia CNN Tools
+# Title:         Caffe Acute Lymphoblastic Leukemia CNN Helpers
 # Description:   Common tools used by the Caffe Acute Lymphoblastic Leukemia CNN
-# Configuration: required/confs.json
+# Configuration: Required/Confs.json
 # Last Modified: 2019-03-10
 #
 ############################################################################################
@@ -37,23 +37,19 @@ from datetime import datetime
 class Helpers():
     
     def __init__(self):
-        
-        ###############################################################
-        #
-        # Sets up all default requirements and placeholders 
-        # needed for the Caffe Acute Lymphoblastic Leukemia CNN.
-        #
-        ###############################################################
+
+        """
+        Sets up all default requirements and placeholders 
+        needed for the Caffe Acute Lymphoblastic Leukemia CNN Helpers.
+        """
         
         pass
     
     def loadConfs(self):
-        
-        ###############################################################
-        #
-        # Load the allCNN Classifier configuration. 
-        #
-        ###############################################################
+
+        """
+        Load the allCNN Classifier configuration. 
+        """
 
         confs = {}
         with open('Required/Confs.json') as confs:
@@ -61,52 +57,42 @@ class Helpers():
         return confs
     
     def currentDateTime(self):
-        
-        ###############################################################
-        #
-        # Gets the current date and time in words. 
-        #
-        ###############################################################
+
+        """
+        Gets the current date and time in words.
+        """
         
         return datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
     def timerStart(self):
-        
-        ###############################################################
-        #
-        # Starts the timer
-        #
-        ###############################################################
+
+        """
+        Starts a timer.
+        """
 
         return str(datetime.now()), time.time()
 
     def timerEnd(self, start):
 
-        ###############################################################
-        #
-        # Ends the timer
-        #
-        ###############################################################
+        """
+        Starts the timer.
+        """
 
         return time.time(), (time.time() - start), str(datetime.now())
 
     def setLogFile(self, path):
 
-        ###############################################################
-        #
-        # Sets a log file path
-        #
-        ###############################################################
+        """
+        Sets a log file path.
+        """
         
         return path + datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d-%H-%M-%S') + ".txt"
         
     def logMessage(self, logfile, process, messageType, message, hide = False):
 
-        ###############################################################
-        #
-        # Logs a message to a log file
-        #
-        ###############################################################
+        """
+        Logs a message to a log file.
+        """
 
         logString = datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S') + "|" + process + "|" + messageType + ": " + message
         with open(logfile,"a") as logLine:
