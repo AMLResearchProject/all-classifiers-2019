@@ -12,6 +12,7 @@ echo "-- Installing requirements"
 echo " "
 
 pip3 install --user scikit-image
+pip3 install --user lmdb
 pip3 install --user pydot
 sudo apt-get install graphviz libgraphviz-dev
 pip3 install --user pygraphviz
