@@ -70,15 +70,15 @@ class allCNN():
         """
         
         # Prints the Net Inputs
-        self.Helpers.logMessage(self.logFile, "allCNN", "Net Inputs", "See below")
+        self.Helpers.logMessage(self.logFile, "allCNN", "Net Inputs", "Shown in console")
         print(self.net.inputs)
         
         # Prints the Net Blobs
-        self.Helpers.logMessage(self.logFile, "allCNN", "Net Blobs", "See below")
+        self.Helpers.logMessage(self.logFile, "allCNN", "Net Blobs", "Shown in console")
         print(self.net.blobs)
         
         # Prints the Net Params
-        self.Helpers.logMessage(self.logFile, "allCNN", "Net Params", "See below")
+        self.Helpers.logMessage(self.logFile, "allCNN", "Net Params", "Shown in console")
         print(self.net.params)
 
     def writeOutputImages(self, image):
