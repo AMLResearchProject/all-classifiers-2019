@@ -61,6 +61,7 @@ class allCNN():
         
         self.net = caffe.Net(self.confs["Settings"]["Classifier"]["layerFile"], caffe.TEST)
         
+        print("")
         self.Helpers.logMessage(self.logFile, "allCNN", "Status", "Caffe net initialized")
 
     def printDetails(self):
@@ -68,18 +69,23 @@ class allCNN():
         """
         Prints and logs input, blob and parameter info.
         """
-        
+
         # Prints the Net Inputs
-        self.Helpers.logMessage(self.logFile, "allCNN", "Net Inputs", "Shown in console")
-        print(self.net.inputs)
+        self.Helpers.logMessage(self.logFile, "allCNN", "Net Inputs", str(self.net.inputs))
         
         # Prints the Net Blobs
-        self.Helpers.logMessage(self.logFile, "allCNN", "Net Blobs", "Shown in console")
-        print(self.net.blobs)
+        self.Helpers.logMessage(self.logFile, "allCNN", "Net Blobs", str(self.net.blobs))
+        
+        # Prints the Net Blob shapes
+        self.Helpers.logMessage(self.logFile, "allCNN", "Net Blobs shapes", str([(k, v.data.shape) for k, v in self.net.blobs.items()]))
         
         # Prints the Net Params
-        self.Helpers.logMessage(self.logFile, "allCNN", "Net Params", "Shown in console")
-        print(self.net.params)
+        self.Helpers.logMessage(self.logFile, "allCNN", "Net Params", str(self.net.params))
+        
+        # Prints the Net Params shapes
+        self.Helpers.logMessage(self.logFile, "allCNN", "Net Params", str([(k, v[0].data.shape, v[1].data.shape) for k, v in self.net.params.items()]))
+        
+        print("")
 
     def writeOutputImages(self, image):
 
