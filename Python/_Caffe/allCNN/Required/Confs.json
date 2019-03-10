@@ -5,7 +5,8 @@
         },
         "Classifier": {
             "layerFile": "Model/allCNN.prototxt",
-            "ModelDire": "Output/",
+            "modelFile": "Model/allCNN.caffemodel",
+            "modelDir": "Model/",
             "dataDir": "/home/upsquared/allCNN/Model/Data/",
             "dataTestDir": "Test/",
             "infoOutDir": "Output/",

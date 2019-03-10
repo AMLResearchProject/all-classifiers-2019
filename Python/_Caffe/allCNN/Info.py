@@ -101,6 +101,18 @@ class allCNN():
 
         self.Helpers.logMessage(self.logFile, "allCNN", "Output Images", "Output images written to " + self.confs["Settings"]["Classifier"]["dataDir"] + self.confs["Settings"]["Classifier"]["infoOutDir"])
 
+    def saveCaffeNet(self):
+        
+        ###############################################################
+        #
+        # Saves our Caffe network.
+        #
+        ###############################################################
+
+        self.net.save(self.confs["Settings"]["Classifier"]["modelFile"])
+        
+        self.Helpers.logMessage(self.logFile, "allCNN", "Status", "Caffe net saved")
+
 allCNN = allCNN()
 
 def main(argv):
@@ -119,7 +131,7 @@ def main(argv):
         
         ###############################################################
         #
-        # Provides information about the Caffe network.
+        # Provides information about our Caffe network.
         #
         ###############################################################
 
@@ -130,12 +142,23 @@ def main(argv):
         
         ###############################################################
         #
-        # Provides information about the Caffe network.
+        # Plots the outputs of each neuron as images.
         #
         ###############################################################
 
         allCNN.loadCaffeNet()
         allCNN.writeOutputImages(allCNN.confs["Settings"]["Classifier"]["dataDir"] + allCNN.confs["Settings"]["Classifier"]["dataTestDir"] + allCNN.confs["Settings"]["Classifier"]["infoTestImage"])
+
+    elif argv[0] == "Save":
+        
+        ###############################################################
+        #
+        # Saves our Caffe network.
+        #
+        ###############################################################
+
+        allCNN.loadCaffeNet()
+        allCNN.saveCaffeNet()
 
 if __name__ == "__main__":
 	main(sys.argv[1:])
