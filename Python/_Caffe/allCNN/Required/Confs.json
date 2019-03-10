@@ -1,0 +1,15 @@
+{
+    "Settings": {
+        "Logs": {
+            "allCNN": "Logs/allCNN"
+        },
+        "Classifier": {
+            "layerFile": "Model/allCNN.prototxt",
+            "ModelDire": "Output/",
+            "dataDir": "/home/upsquared/allCNN/Model/Data/",
+            "dataTestDir": "Test/",
+            "infoOutDir": "Output/",
+            "infoTestImage": "Im068_0.jpg"
+        }
+    }
+}

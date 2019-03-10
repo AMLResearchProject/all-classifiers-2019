@@ -23,23 +23,19 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 #
-# Title:         Caffe Acute Lymphoblastic Leukemia CNN Info
-# Description:   Used to view info Caffe Acute Lymphoblastic Leukemia CNN
+# Title:         Caffe Acute Lymphoblastic Leukemia CNN Tools
+# Description:   Common tools used by the Caffe Acute Lymphoblastic Leukemia CNN
 # Configuration: required/confs.json
 # Last Modified: 2019-03-10
 #
 ############################################################################################
 
-import os, sys, cv2
-sys.path.append('/home/upsquared/caffe/python')
-import caffe
+import json, time
 
-import numpy as np
+from datetime import datetime
 
-from Classes.Helpers import Helpers
-
-class allCNN():
-
+class Helpers():
+    
     def __init__(self):
         
         ###############################################################
@@ -49,93 +45,71 @@ class allCNN():
         #
         ###############################################################
         
-        # Load Helper functions
-        self.Helpers = Helpers()
-        self.confs = self.Helpers.loadConfs()
-        self.logFile = self.Helpers.setLogFile(self.confs["Settings"]["Logs"]["allCNN"])
-        
-        self.Helpers.logMessage(self.logFile, "allCNN", "Status", "Init complete")
-
-    def loadCaffeNet(self):
+        pass
+    
+    def loadConfs(self):
         
         ###############################################################
         #
-        # Loads the Caffe network using prototxt layer definition.
+        # Load the allCNN Classifier configuration. 
         #
         ###############################################################
-        
-        self.net = caffe.Net(self.confs["Settings"]["Classifier"]["layerFile"], caffe.TEST)
-        
-        self.Helpers.logMessage(self.logFile, "allCNN", "Status", "Caffe net initialized")
 
-    def printDetails(self):
-        
-        ###############################################################
-        #
-        # Prints and logs input, blob and parameter info.
-        #
-        ###############################################################
-        
-        self.Helpers.logMessage(self.logFile, "allCNN", "Net Inputs", "See below")
-        print(self.net.inputs)
-        self.Helpers.logMessage(self.logFile, "allCNN", "Net Blobs", "See below")
-        print(self.net.blobs)
-        self.Helpers.logMessage(self.logFile, "allCNN", "Net Params", "See below")
-        print(self.net.params)
-
-    def writeOutputImages(self, image):
+        confs = {}
+        with open('Required/Confs.json') as confs:
+            confs = json.loads(confs.read())
+        return confs
+    
+    def currentDateTime(self):
         
         ###############################################################
         #
-        # Prints input, blob and parameter info.
+        # Gets the current date and time in words. 
         #
         ###############################################################
-
-        inp = np.transpose(cv2.imread(image))
-        self.net.blobs['data'].reshape(1, *inp.shape)
-        self.net.blobs['data'].data[...] = inp
-        self.net.forward()
-
-        for i in range(30):
-            cv2.imwrite(self.confs["Settings"]["Classifier"]["dataDir"] + self.confs["Settings"]["Classifier"]["infoOutDir"] + 'out_' + str(i) + '.jpg', 255 * self.net.blobs['conv1'].data[0,i])
-
-        self.Helpers.logMessage(self.logFile, "allCNN", "Output Images", "Output images written to " + self.confs["Settings"]["Classifier"]["dataDir"] + self.confs["Settings"]["Classifier"]["infoOutDir"])
-
-allCNN = allCNN()
-
-def main(argv):
-
-    if(len(argv) < 1):
+        
+        return datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
+    def timerStart(self):
         
         ###############################################################
         #
-        # Incorrect arguments size.
+        # Starts the timer
         #
         ###############################################################
 
-        allCNN.Helpers.logMessage(allCNN.logFile, "allCNN", "Arguments", "Please provide NetworkInfo or Outputs argument")
+        return str(datetime.now()), time.time()
 
-    elif argv[0] == "NetworkInfo":
+    def timerEnd(self, start):
+
+        ###############################################################
+        #
+        # Ends the timer
+        #
+        ###############################################################
+
+        return time.time(), (time.time() - start), str(datetime.now())
+
+    def setLogFile(self, path):
+
+        ###############################################################
+        #
+        # Sets a log file path
+        #
+        ###############################################################
         
-        ###############################################################
-        #
-        # Provides information about the Caffe network.
-        #
-        ###############################################################
-
-        allCNN.loadCaffeNet()
-        allCNN.printDetails()
-
-    elif argv[0] == "Outputs":
+        return path + datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d-%H-%M-%S') + ".txt"
         
+    def logMessage(self, logfile, process, messageType, message, hide = False):
+
         ###############################################################
         #
-        # Provides information about the Caffe network.
+        # Logs a message to a log file
         #
         ###############################################################
 
-        allCNN.loadCaffeNet()
-        allCNN.writeOutputImages(allCNN.confs["Settings"]["Classifier"]["dataDir"] + allCNN.confs["Settings"]["Classifier"]["dataTestDir"] + allCNN.confs["Settings"]["Classifier"]["infoTestImage"])
-
-if __name__ == "__main__":
-	main(sys.argv[1:])
+        logString = datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S') + "|" + process + "|" + messageType + ": " + message
+        with open(logfile,"a") as logLine:
+            logLine.write(logString+'\r\n')
+        if hide == False:
+            print(logString)
