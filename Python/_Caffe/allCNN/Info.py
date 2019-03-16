@@ -77,7 +77,7 @@ class allCNN():
         self.Helpers.logMessage(self.logFile, "allCNN", "Net Blobs", str(self.net.blobs))
         
         # Prints the Net Blob shapes
-        self.Helpers.logMessage(self.logFile, "allCNN", "Net Blobs shapes", str([(k, v.data.shape) for k, v in self.net.blobs.items()]))
+        self.Helpers.logMessage(self.logFile, "allCNN", "Net Blob shapes", str([(k, v.data.shape) for k, v in self.net.blobs.items()]))
         
         # Prints the Net Params
         self.Helpers.logMessage(self.logFile, "allCNN", "Net Params", str(self.net.params))
@@ -105,8 +105,13 @@ class allCNN():
 
         # Loops through each neuron in the first convolution layer and saves the images in that neuron
         for i in range(30):
-            cv2.imwrite(self.confs["Settings"]["Classifier"]["dataDir"] + self.confs["Settings"]["Classifier"]["infoOutDir"] + 'out_' + str(i) + '.jpg', 
+            cv2.imwrite(self.confs["Settings"]["Classifier"]["dataDir"] + self.confs["Settings"]["Classifier"]["infoOutDir"] + 'conv1/out_' + str(i) + '.jpg', 
                         255 * self.net.blobs['conv1'].data[0,i])
+
+        # Loops through each neuron in the second convolution layer and saves the images in that neuron
+        for i in range(30):
+            cv2.imwrite(self.confs["Settings"]["Classifier"]["dataDir"] + self.confs["Settings"]["Classifier"]["infoOutDir"] + 'conv2/out_' + str(i) + '.jpg', 
+                        255 * self.net.blobs['conv2'].data[0,i])
 
         self.Helpers.logMessage(self.logFile, 
                                 "allCNN", 
