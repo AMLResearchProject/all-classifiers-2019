@@ -4,13 +4,48 @@
             "allCNN": "Logs/allCNN"
         },
         "Classifier": {
-            "layerFile": "Model/allCNN.prototxt",
-            "modelFile": "Model/allCNN.caffemodel",
-            "modelDir": "Model/",
-            "dataDir": "/home/upsquared/allCNN/Model/Data/",
-            "dataTestDir": "Test/",
-            "infoOutDir": "Output/",
-            "infoTestImage": "Im068_0.jpg"
+            "Caffe": {
+                "layerFile": "Model/allCNN.prototxt",
+                "proto": "Model/mean.binaryproto"
+            },
+            "Data": {
+                "dir": "/home/upsquared/allCNN/Model/Data/",
+                "dirTest": "Test/",
+                "negativeDir": "0",
+                "negativeTrainAmnt": 40,
+                "negativeTestAmnt": 19,
+                "positiveDir": "1",
+                "positiveTrainAmnt": 40,
+                "positiveTestAmnt": 9,
+                "labels": "Model/labels.txt",
+                "validFiles": [
+                    ".jpg",
+                    ".jpeg",
+                    ".JPG",
+                    ".JPEG",
+                    ".png",
+                    ".PNG",
+                    ".gif",
+                    ".GIF"
+                ]
+            },
+            "Info": {
+                "outDir": "Output/",
+                "testImage": "Im068_0.jpg"
+            },
+            "Input": {
+                "imageWidth": 50,
+                "imageHeight": 50
+            },
+            "LMDB": {
+                "train": "Model/Data/train_lmdb",
+                "validation": "Model/Data/validation_lmdb"
+            },
+            "Model": {
+                "file": "Model/allCNN.caffemodel",
+                "dir": "Model/",
+                "dirData": "/home/upsquared/allCNN/Model/Data/Train/"
+            }
         }
     }
 }
