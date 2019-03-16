@@ -163,9 +163,194 @@ layer {
 ```
 
 # Conclusion: 
-In allCNN.prototxt we should now have the architecture proposed in the  Acute Myeloid Leukemia Classification Using Convolution Neural Network In Clinical Decision Support System paper, in the next part of the series I will cover using this architecture to train our model. 
+In [allCNN.prototxt](https://www.linkedin.com/pulse/detecting-acute-lymphoblastic-leukemia-using-caffe-2-milton-barker-1f "allCNN.prototxt") we should now have the architecture proposed in the [Acute Myeloid Leukemia Classification Using Convolution Neural Network In Clinical Decision Support System](https://airccj.org/CSCP/vol7/csit77505.pdf "Acute Myeloid Leukemia Classification Using Convolution Neural Network In Clinical Decision Support System") paper, it is not quite ready for training yet but we can use it to check if the network matches the one proposed in the paper, and visualize the network.
+
+```
+layer {
+  name: "data"
+  type: "Input"
+  input_param { shape: { dim: 1 dim: 3 dim: 50 dim: 50 }}
+  top: "data"
+}
+layer {
+  name: "conv1"
+  type: "Convolution"
+  convolution_param {
+    num_output: 30
+    kernel_size: 5
+    stride: 1
+    pad: 2
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+  bottom: "data"
+  top: "conv1"
+}
+layer {
+  name: "conv2"
+  type: "Convolution"
+  convolution_param {
+    num_output: 30
+    kernel_size: 5
+    stride: 1
+    pad: 2
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+  bottom: "conv1"
+  top: "conv2"
+}
+layer {
+ name: "pool1"
+ type: "Pooling"
+ pooling_param {
+   pool: MAX
+   kernel_size: 2
+   stride: 2
+ }
+ bottom: "conv2"
+ top: "pool1"
+}
+layer {
+ name: "fc"
+ type: "InnerProduct"
+ inner_product_param {
+   num_output: 2
+   weight_filler {
+     type: "xavier"
+   }
+   bias_filler {
+     type: "constant"
+     value: 0
+   }
+ }
+ bottom: "pool1"
+ top: "fc"
+}
+layer {
+ name: "prob"
+ type: "Softmax"
+ bottom: "fc"
+ top: "prob"
+} 
+```
+
+Using the [Info.py](https://github.com/AdamMiltonBarker/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Info.py "Info.py") script in the [AML / ALL Classifiers repository](https://github.com/AdamMiltonBarker/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Info.py "AML / ALL Classifiers repository") we can check our networks match. First you need to clone the repository using the following commands:
+
+```
+git clone https://github.com/AMLResearchProject/AML-ALL-Classifiers.git
+```
+
+Then navigate to the allCNN directory:
+
+```
+cd Python/_Caffe/allCNN
+```
+
+Now you need to install any requirements:
+
+```
+sed -i 's/\r//' Setup.sh
+sh Setup.sh
+```
+
+And finally we can check our network:
+
+```
+python3.5 Info.py NetworkInfo
+
+```
+
+The output of the script will include the following, showing that our network was created correctly:
+
+```
+I0309 16:11:30.786394 13920 layer_factory.hpp:77] Creating layer data
+I0309 16:11:30.786425 13920 net.cpp:86] Creating Layer data
+I0309 16:11:30.786440 13920 net.cpp:382] data -> data
+I0309 16:11:30.786473 13920 net.cpp:124] Setting up data
+I0309 16:11:30.786490 13920 net.cpp:131] Top shape: 1 3 50 50 (7500)
+I0309 16:11:30.786499 13920 net.cpp:139] Memory required for data: 30000
+I0309 16:11:30.786507 13920 layer_factory.hpp:77] Creating layer conv1
+I0309 16:11:30.786526 13920 net.cpp:86] Creating Layer conv1
+I0309 16:11:30.786538 13920 net.cpp:408] conv1 <- data
+I0309 16:11:30.786551 13920 net.cpp:382] conv1 -> conv1
+I0309 16:11:30.786855 13920 net.cpp:124] Setting up conv1
+I0309 16:11:30.786872 13920 net.cpp:131] Top shape: 1 30 50 50 (75000)
+I0309 16:11:30.786880 13920 net.cpp:139] Memory required for data: 330000
+I0309 16:11:30.786901 13920 layer_factory.hpp:77] Creating layer conv2
+I0309 16:11:30.786921 13920 net.cpp:86] Creating Layer conv2
+I0309 16:11:30.786931 13920 net.cpp:408] conv2 <- conv1
+I0309 16:11:30.786943 13920 net.cpp:382] conv2 -> conv2
+I0309 16:11:30.787359 13920 net.cpp:124] Setting up conv2
+I0309 16:11:30.787375 13920 net.cpp:131] Top shape: 1 30 50 50 (75000)
+I0309 16:11:30.787384 13920 net.cpp:139] Memory required for data: 630000
+I0309 16:11:30.787398 13920 layer_factory.hpp:77] Creating layer pool1
+I0309 16:11:30.787411 13920 net.cpp:86] Creating Layer pool1
+I0309 16:11:30.787420 13920 net.cpp:408] pool1 <- conv2
+I0309 16:11:30.787432 13920 net.cpp:382] pool1 -> pool1
+I0309 16:11:30.787456 13920 net.cpp:124] Setting up pool1
+I0309 16:11:30.787470 13920 net.cpp:131] Top shape: 1 30 25 25 (18750)
+I0309 16:11:30.787478 13920 net.cpp:139] Memory required for data: 705000
+I0309 16:11:30.787487 13920 layer_factory.hpp:77] Creating layer fc
+I0309 16:11:30.787501 13920 net.cpp:86] Creating Layer fc
+I0309 16:11:30.787510 13920 net.cpp:408] fc <- pool1
+I0309 16:11:30.787523 13920 net.cpp:382] fc -> fc
+I0309 16:11:30.788055 13920 net.cpp:124] Setting up fc
+I0309 16:11:30.788071 13920 net.cpp:131] Top shape: 1 2 (2)
+I0309 16:11:30.788079 13920 net.cpp:139] Memory required for data: 705008
+I0309 16:11:30.788110 13920 layer_factory.hpp:77] Creating layer prob
+I0309 16:11:30.788125 13920 net.cpp:86] Creating Layer prob
+I0309 16:11:30.788133 13920 net.cpp:408] prob <- fc
+I0309 16:11:30.788144 13920 net.cpp:382] prob -> prob
+I0309 16:11:30.788161 13920 net.cpp:124] Setting up prob
+I0309 16:11:30.788175 13920 net.cpp:131] Top shape: 1 2 (2)
+I0309 16:11:30.788183 13920 net.cpp:139] Memory required for data: 705016
+I0309 16:11:30.788197 13920 net.cpp:202] prob does not need backward computation.
+I0309 16:11:30.788205 13920 net.cpp:202] fc does not need backward computation.
+I0309 16:11:30.788214 13920 net.cpp:202] pool1 does not need backward computation.
+I0309 16:11:30.788223 13920 net.cpp:202] conv2 does not need backward computation.
+I0309 16:11:30.788231 13920 net.cpp:202] conv1 does not need backward computation.
+I0309 16:11:30.788240 13920 net.cpp:202] data does not need backward computation.
+I0309 16:11:30.788249 13920 net.cpp:244] This network produces output prob
+I0309 16:11:30.788262 13920 net.cpp:257] Network initialization done.
+```
+
+Finally we can visualize our network using the following command:
+
+```
+python3.5 /home/upsquared/caffe/python/draw_net.py allCNN.prototxt Model/allCNN.png
+```
+
+The above command will produce the following image:
+
+![Network Architecture](Media/Images/allCNN.png)  
+_Figure 6. allCNN Network Architecture_ 
+
+To save our network we can use the following command:
+
+```
+python3.5 Info.py Save
+```
+
+This will save the network to the location Model/allCNN.caffemodel. In the next part of this series of articles I will create the training and validation datasets that we will use for this network.
 
 Thanks to AML/ALL AI Research Project team members Amita Kapoor (Associate Professor @ Delhi University, New Dehli, India) and Ho Leung Ng (Kansas State University, Dept. Biochemistry & Molecular Biophysics) for their assistance with the article.
+
+# References
+UP Squared: https://up-board.org/upsquared/specifications/
+Neural Compute Stick: https://software.intel.com/es-es/neural-compute-stick
+Caffe Installation: https://gist.github.com/nikitametha/c54e1abecff7ab53896270509da80215
+Convolutions: http://aishack.in/tutorials/convolutions
 
 # Contributing
 We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.
