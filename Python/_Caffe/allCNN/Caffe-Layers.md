@@ -1,6 +1,6 @@
 # Detecting Acute Lymphoblastic Leukemia Using Caffe*, OpenVINO™ and Intel® Neural Compute Stick 2: Part 1
 ## Introduction to convolutional neural networks in Caffe*
-![Detecting Acute Lymphoblastic Leukemia Using Caffe*, OpenVINO™ and Intel® Neural Compute Stick 2: Part 1](Media/Images/Anh-Vo-Convolution.png)
+![Detecting Acute Lymphoblastic Leukemia Using Caffe*, OpenVINO™ and Intel® Neural Compute Stick 2: Part 1](Media/Images/Anh-Vo-Convolution.png)  
 _IMAGE CREDIT: Anh Vo_
 
 As part of my R&D for the Acute Myeloid/Lymphoblastic Leukemia (AML/ALL) AI Research Project, I am reviewing a selection of papers related to using Convolutional Neural Networks (CNN) for detecting AML/ALL. These papers share various ways of creating CNNs, and include useful information about the structure of the layers and the methods used which will help to reproduce the work outlined in the papers.
