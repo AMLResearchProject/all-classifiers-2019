@@ -69,7 +69,7 @@ We can create a simple input layer using the following in a prototxt file: [allC
 ## Feature Detection Layers
 ### Convolutional Layers
 ![Convolutional Layers](Media/Images/Anh-Vo-Convolution.png)  
-_Figure 2. Convolutional Layers_ (source)
+_Figure 2. Convolutional Layers_ ([Source](https://anhvnn.wordpress.com/2018/02/01/deep-learning-computer-vision-and-convolutional-neural-networks/ "Source"))
 
 As mentioned in the paper, 2 convolution layers were used in the proposed architecture. The convolutional layers produce a feature map of a filter’s output activations. During convolution a filter is moved across the image and creates a new pixel in the output image.
 
@@ -98,7 +98,7 @@ We can define the layers as shown below. You will notice the bottom and top sett
 
 ### Pooling Layer
 ![Max Pooling Layer](Media/Images/Pooling.jpg)  
-_Figure 3. Max Pooling Layer_ (source)
+_Figure 3. Max Pooling Layer_ ([Source](https://cs231n.github.io/convolutional-networks/#pool "Source"))
 
 The authors propose a pooling layer as the final layer in the feature extraction layers. Pooling layers help to reduce overfitting by reducing the size of the representation and the amount of activations/computation used by the network. 
 
@@ -117,6 +117,54 @@ layer {
   top: "fc"
 }
 ```
+
+## Feature Classification Layers
+### Fully Connected Layer
+![Fully Connected Layer](Media/Images/Fully-Connected-Layer.jpg)  
+_Figure 4. Fully Connected Layer_ ([Source](https://medium.com/@eternalzer0dayx/demystifying-convolutional-neural-networks-ca17bdc75559 "Source"))
+
+The proposed architecture for feature classification includes a 2 x 2 fully connected or inner product layer. The name fully connected layers means the fc layers are fully connected to the activations of the layers they follow. Fully connected layers used with a softmax output layer are used to classify the input image using the trained classes. For more information about fully connected layers visit this link.
+The authors state a fully connected layer with 2 neurons. We can recreate this layer using the following in the allCNN.prototxt file.
+
+```
+layer {
+  name: "fc"
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+  bottom: "pool"
+  top: "fc"
+}
+```
+
+### Softmax Layer
+![Softmax Layer](Media/Images/Softmax.png)  
+_Figure 5. Softmax Layer_ ([Source](https://towardsdatascience.com/deep-learning-concepts-part-1-ea0b14b234c8 "Source"))
+
+The softmax layer proposed in the paper will output a probabilities distribution of an image being from each of the trained classes, each of the probabilities will add up to 1.0. For more information about softmax you can visit this link.
+
+We can recreate the proposed softmax layer using allCNN.prototxt using the following: 
+
+```
+layer {
+  name: "prob"
+  type: "Softmax"
+  bottom: "fc"
+  top: "prob"
+}
+```
+
+# Conclusion: 
+In allCNN.prototxt we should now have the architecture proposed in the  Acute Myeloid Leukemia Classification Using Convolution Neural Network In Clinical Decision Support System paper, in the next part of the series I will cover using this architecture to train our model. 
+Thanks to Amita Kapoor, Associate Professor @ Delhi University, New Dehli, India and AML/ALL AI Research Project team member for her assistance with the article.
 
 # Contributing
 We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.
