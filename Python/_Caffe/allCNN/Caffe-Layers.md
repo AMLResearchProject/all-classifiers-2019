@@ -347,10 +347,10 @@ This will save the network to the location Model/allCNN.caffemodel. In the next 
 Thanks to AML/ALL AI Research Project team members Amita Kapoor (Associate Professor @ Delhi University, New Dehli, India) and Ho Leung Ng (Kansas State University, Dept. Biochemistry & Molecular Biophysics) for their assistance with the article.
 
 # References
-UP Squared: https://up-board.org/upsquared/specifications/
-Neural Compute Stick: https://software.intel.com/es-es/neural-compute-stick
-Caffe Installation: https://gist.github.com/nikitametha/c54e1abecff7ab53896270509da80215
-Convolutions: http://aishack.in/tutorials/convolutions
+UP Squared: https://up-board.org/upsquared/specifications/  
+Neural Compute Stick: https://software.intel.com/es-es/neural-compute-stick  
+Caffe Installation: https://gist.github.com/nikitametha/c54e1abecff7ab53896270509da80215  
+Convolutions: http://aishack.in/tutorials/convolutions  
 
 # Contributing
 We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.
