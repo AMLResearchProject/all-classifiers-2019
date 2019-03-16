@@ -40,7 +40,7 @@ This tutorial can be found on the following platforms:
 ## Caffe Installation:
 In my case I installed Caffe on an UP2, but as stated above this is not a requirement. During installation I ran into issues whilst following the Caffe Ubuntu 16.04 installation guide, which led me to find the following tutorial. To install on Ubuntu 16.04, follow this article which will take you through installing all required dependencies and installing PyCaffe. If you are installing on an UP2 or similar this may take some time.
 
-![Caffe Installation](Media/Images/Caffe-installation.jpg)
+![Caffe Installation](Media/Images/Caffe-installation.jpg)  
 _Figure 1. Caffe Installation_
 
 Now that we have Caffe installed, I will explain a little bit about it. Caffe is another framework that we can use for building deep learning networks, including convolutional neural networks. I have used Caffe before with Neural Compute Stick (NCS) and YOLO for object detection, but have never really gone too deep into it the framework. 
