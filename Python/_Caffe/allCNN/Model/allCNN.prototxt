@@ -1,3 +1,4 @@
+name: "allCNN"
 layer {
   name: "data"
   type: "Input"
