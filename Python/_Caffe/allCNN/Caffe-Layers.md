@@ -1,5 +1,5 @@
-# Detecting Acute Lymphoblastic Leukemia Using Caffe*, OpenVINO™ and Intel® Neural Compute Stick 2: Part 1
-## Introduction to convolutional neural networks in Caffe*
+# Detecting Acute Lymphoblastic Leukemia Using Caffe*, OpenVINO™ and Intel® Neural Compute Stick 2
+## Part 1: Introduction to convolutional neural networks in Caffe*
 ![Detecting Acute Lymphoblastic Leukemia Using Caffe*, OpenVINO™ and Intel® Neural Compute Stick 2: Part 1](Media/Images/Anh-Vo-Convolution.png)  
 _IMAGE CREDIT: Anh Vo_
 
@@ -164,7 +164,8 @@ layer {
 
 # Conclusion: 
 In allCNN.prototxt we should now have the architecture proposed in the  Acute Myeloid Leukemia Classification Using Convolution Neural Network In Clinical Decision Support System paper, in the next part of the series I will cover using this architecture to train our model. 
-Thanks to Amita Kapoor, Associate Professor @ Delhi University, New Dehli, India and AML/ALL AI Research Project team member for her assistance with the article.
+
+Thanks to AML/ALL AI Research Project team members Amita Kapoor (Associate Professor @ Delhi University, New Dehli, India) and Ho Leung Ng (Kansas State University, Dept. Biochemistry & Molecular Biophysics) for their assistance with the article.
 
 # Contributing
 We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.
