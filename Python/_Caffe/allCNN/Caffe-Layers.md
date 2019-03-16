@@ -20,9 +20,9 @@ In the augmentation paper, the authors mentioned that they were unable to reprod
 
 “Our experiments were conducted on Matlab with 1188 images, 70% (831 images) of them for training and the remaining 30% (357 images) for testing our model. The slightly narrow architecture used dramatically failed to reach an appropriate accuracy when applied to this augmented dataset. Therefore, we have presented here a deeper CNN architecture and changed the size of the input volume in order to improve the accuracy rate of the recognition of leukemia (our proposed CNN model achieved 96.6%)”
 
-This tutorial can be found on the following platforms:
+__This tutorial can be found on the following platforms:__
 
-- [Intel Developer Zone](https://software.intel.com/en-us/articles/detecting-acute-lymphoblastic-leukemia-using-caffe-openvino-neural-compute-stick-2-part-1 "Intel Developer Zone")
+- [Intel AI Developer Program Documentation](https://software.intel.com/en-us/articles/detecting-acute-lymphoblastic-leukemia-using-caffe-openvino-neural-compute-stick-2-part-1 "Intel AI Developer Program Documentation")
 - [Linkedin Pulse](https://www.linkedin.com/pulse/detecting-acute-lymphoblastic-leukemia-using-caffe-2-milton-barker "Linkedin Pulse")
 
 ## Hardware:
@@ -64,6 +64,58 @@ We can create a simple input layer using the following in a prototxt file: [allC
     type: "Input"
     input_param { shape: { dim: 1 dim: 3 dim: 50 dim: 50 }}
   }
+```
+
+## Feature Detection Layers
+### Convolutional Layers
+![Convolutional Layers](Media/Images/Anh-Vo-Convolution.png)  
+_Figure 2. Convolutional Layers_ (source)
+
+As mentioned in the paper, 2 convolution layers were used in the proposed architecture. The convolutional layers produce a feature map of a filter’s output activations. During convolution a filter is moved across the image and creates a new pixel in the output image.
+
+We can define the layers as shown below. You will notice the bottom and top settings, these position  this layer below the data (input) layer and top is itself conv1, num_outputs is the number of filters, kernel_size represents the size of the filters, stride represents how many pixels the kernel will move by, pad is padding added to the input image (required if we increase the size of the filter larger than the image), engine specifies which engine the model will use (CAFFE/CUDNN),  weight_filler initializes the weights, we use the algorithm xavier which allows us to keep a stable signal, and finally bias_filter initializes the bias to 0, in the future I will cover more information about these parameters.
+
+```
+  layer {
+    name: "conv1"
+    type: "Convolution"
+    convolution_param {
+      num_output: 3
+      kernel_size: 5.5
+      stride: 1
+      weight_filler {
+        type: "Xavier"
+      }
+      bias_filler {
+        type: "constant"
+        value: 0
+      }
+    }
+    bottom: "data"
+    top: "conv2"
+  }
+```
+
+### Pooling Layer
+![Max Pooling Layer](Media/Images/Pooling.jpg)  
+_Figure 3. Max Pooling Layer_ (source)
+
+The authors propose a pooling layer as the final layer in the feature extraction layers. Pooling layers help to reduce overfitting by reducing the size of the representation and the amount of activations/computation used by the network. 
+
+The authors state they use a 25 x 25 layer with a filter size of 2 and using a stride of 2. We can define the pooling layer using the allCNN.prototxt file with the following:
+
+```
+layer {
+  name: "pool1"
+  type: "Pooling"
+  pooling_param {
+    pool: MAX
+    kernel_size: 2
+    stride: 2
+  }
+  bottom: "conv2"
+  top: "fc"
+}
 ```
 
 # Contributing
