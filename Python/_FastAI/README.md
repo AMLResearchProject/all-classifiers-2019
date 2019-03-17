@@ -5,7 +5,7 @@ The Peter Moss Acute Myeloid/Lymphoblastic Leukemia Python FastAI classifiers ar
 # FastAI Classifier Project Contributors
 
 - [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") - Bigfinite IoT Network Engineer & Intel Software Innovator, Barcelona, Spain
-- [Salvatore Raieli](https://github.com/holeung "Salvatore Raieli") - PhD Immunolgy / Bioinformaticia, Bologna, Italy
+- [Salvatore Raieli](https://www.linkedin.com/in/salvatore-raieli/ "Salvatore Raieli") - PhD Immunolgy / Bioinformaticia, Bologna, Italy
 
 # Python FastAI Projects
 
