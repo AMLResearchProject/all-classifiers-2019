@@ -10,8 +10,8 @@ __ALL_IDB1__ from the [Acute Lymphoblastic Leukemia Image Database for Image Pro
 
 # Detecting Acute Lymphoblastic Leukemia Using Caffe, OpenVino & Neural Compute Stick Series 
 
-- [Introduction to convolutional neural networks in Caffe*, Intel AI Dev Program Documentation](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Caffe-Layers.md "Introduction to convolutional neural networks in Caffe*, Intel AI Dev Program Documentation")
-- [Preparing the Acute Lymphoblastic Leukemia dataset, Linkedin Pulse](https://www.linkedin.com/pulse/detecting-acute-lymphoblastic-leukemia-using-caffe-2-milton-barker-1f "Preparing the Acute Lymphoblastic Leukemia dataset, Linkedin Pulse")
+- [Introduction to convolutional neural networks in Caffe*](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Caffe-Layers.md "Introduction to convolutional neural networks in Caffe*")
+- [Preparing the Acute Lymphoblastic Leukemia dataset](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Data-Sorting.md "Preparing the Acute Lymphoblastic Leukemia dataset")
 
 # Contributing
 We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.
