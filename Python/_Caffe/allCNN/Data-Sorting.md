@@ -55,6 +55,20 @@ This article introduces two additional scripts in the allCNN project, [Data.py](
 ## Sort ALL_IDB1
 First of all, you need to upload the ALL_IDB1 dataset to the [Model/Data/Train/0](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Caffe/allCNN/Model/Data/Train/0 "Model/Data/Train/0") and [Model/Data/Train/1](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Caffe/allCNN/Model/Data/Train/1 "Model/Data/Train/1") directories, to do this you can take the positive images from ALL_IDB1 (ending in _1.jpg) and add to the Model/Data/Train/1 directory, then do the same for the negative images (ending in _0.jpg).
 
+## Proposed Training / Testing Sets
+The training and validation sets proposed in the paper are as follows:
+
+![Proposed Training / Testing Sets](Media/Images/ALL_IDB1_data.jpg)  
+Figure 3. Training / testing data from paper ([Source](https://airccj.org/CSCP/vol7/csit77505.pdf "Source"))
+
+## Recreating Proposed Training / Testing Sets  
+![Training/validation data sorting output](Media/Images/Data-Sizes.jpg)  
+Figure 4. Training/validation data sorting output
+
+In this article we are wanting to replicate the training and validation dataset sizes used in the paper. To ensure we get the correct training and validation sizes we use helper classes that I wrote that are provided in the Classes directory.
+
+A reminder that we use the [ALL_IDB1 dataset from Acute Lymphoblastic Leukemia Image Database for Image Processing](https://homes.di.unimi.it/scotti/all/ "ALL_IDB1 dataset from Acute Lymphoblastic Leukemia Image Database for Image Processing") dataset, to use this dataset you must request access by visiting [this page](https://homes.di.unimi.it/scotti/all/#download "this page").
+
 # Detecting Acute Lymphoblastic Leukemia Using Caffe, OpenVino & Neural Compute Stick Series
 - [Introduction to convolutional neural networks in Caffe](https://software.intel.com/en-us/articles/detecting-acute-lymphoblastic-leukemia-using-caffe-openvino-neural-compute-stick-2-part-1 "Introduction to convolutional neural networks in Caffe")  
 - [Preparing the Acute Lymphoblastic Leukemia dataset](https://www.linkedin.com/pulse/detecting-acute-lymphoblastic-leukemia-using-caffe-2-milton-barker-1f "Preparing the Acute Lymphoblastic Leukemia dataset")  
