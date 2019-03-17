@@ -1,5 +1,5 @@
 # Acute Lymphoblastic Leukemia Convolutional Neural Network
-![Peter Moss Acute Myeloid/Lymphoblastic AI Research Project](../../../Media/Images/banner.png)
+![Acute Lymphoblastic Leukemia Convolutional Neural Network](../../../Media/Images/banner.png)
 The Peter Moss Acute Lymphoblastic Leukemia Convolutional Neural Network is a Caffe network created by following the work in the research paper: [Acute Myeloid Leukemia Classification Using Convolution Neural Network In Clinical Decision Support System](https://airccj.org/CSCP/vol7/csit77505.pdf "Acute Myeloid Leukemia Classification Using Convolution Neural Network In Clinical Decision Support System"). 
 
 ## Network Layers
