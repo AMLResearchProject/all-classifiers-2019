@@ -72,17 +72,29 @@ A reminder that we use the [ALL_IDB1 dataset from Acute Lymphoblastic Leukemia I
 ### CaffeHelpers
 If you have the latest code from the repository, you should have the file: [Classes/CaffeHelpers.py](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Classes/CaffeHelpers.py "Classes/CaffeHelpers.py") in the [allCNN project directory](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Caffe/allCNN/ "allCNN project directory"). This Python class will be used to handle Caffe related tasks for our network. The three main functions that we use in CaffeHelpers are recreatePaperData(), createTrainingLMDB(), createValidationLMDB() and computeMean().
 
-### recreatePaperData()
+#### recreatePaperData()
 recreatePaperData() is the function that replicates the training and validation datasets using the sizes mentioned in the paper.
 
-### createTrainingLMDB()
+#### createTrainingLMDB()
 createTrainingLMDB() is the function that converts our training dataset into an LMDB database.
 
-### createValidationLMDB ()
+#### createValidationLMDB ()
 createValidationLMDB () is the function that converts our validation dataset into an LMDB database.
 
-### computeMean()
+#### computeMean()
 computeMean() is the function that removes the mean of each image.
+
+### Data
+[Data.py](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Data.py "Data.py") in the [allCNN project directory](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Caffe/allCNN/ "allCNN project directory") provides an easy way to run the required functions for sorting our dataset. This file is basically a wrapper around the [CaffeHelpers class](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Classes/CaffeHelpers.py "CaffeHelpers class").
+
+### Creating the dataset
+Have a quick look through the source code to familiarize yourself with what is going on, then assuming you are in the allCNN project root use the following command to run the data sorting process.
+
+```
+python3.5 Data.py
+```
+## Conclusion
+As shown in Figure 4, we have now created training and validation datasets that match the ones used in the paper. In the next article we will train the convolutional neural network using this dataset.
 
 # Detecting Acute Lymphoblastic Leukemia Using Caffe, OpenVino & Neural Compute Stick Series
 - [Introduction to convolutional neural networks in Caffe](https://software.intel.com/en-us/articles/detecting-acute-lymphoblastic-leukemia-using-caffe-openvino-neural-compute-stick-2-part-1 "Introduction to convolutional neural networks in Caffe")  
