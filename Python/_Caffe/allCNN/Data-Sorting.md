@@ -1,6 +1,6 @@
 # Detecting Acute Lymphoblastic Leukemia Using Caffe*, OpenVINO™ and Intel® Neural Compute Stick 2
 ## Part 2: Preparing the Acute Lymphoblastic Leukemia dataset
-![Detecting Acute Lymphoblastic Leukemia Using Caffe*, OpenVINO™ and Intel® Neural Compute Stick 2: Part 2](Media/Images/Part-2-Banner.png)  ]
+![Detecting Acute Lymphoblastic Leukemia Using Caffe*, OpenVINO™ and Intel® Neural Compute Stick 2: Part 2](Media/Images/Part-2-Banner.png)  
 
 In the first part of this series: [Introduction to convolutional neural networks in Caffe](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Caffe-Layers.md "Introduction to convolutional neural networks in Caffe"), I covered the steps to recreate the basics of the convolutional neural network proposed in the paper: [Acute Myeloid Leukemia Classification Using Convolution Neural Network In Clinical Decision Support System](https://airccj.org/CSCP/vol7/csit77505.pdf "Acute Myeloid Leukemia Classification Using Convolution Neural Network In Clinical Decision Support System").
 
@@ -45,6 +45,15 @@ Figure 2. conv2 layer neuron output images
 
 # Preparing the Acute Lymphoblastic Leukemia dataset
 The first thing we need to do is to sort our training and validation data. In the paper the authors state that they used the full 108 image dataset, ALL_IDB1. The paper shows that a training dataset of 80 images was used, and a validation dataset of 28. First of all we need to resize the dataset to 50px x 50px to match the input dimensions of our network, this process is handled by the functions provided in CaffeHelpers.py.
+
+## Sorting the data
+This article introduces two additional scripts in the allCNN project, [Data.py](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Data.py "Data.py") & [Classes/CaffeHelpers.py](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Classes/CaffeHelpers.py "Classes/CaffeHelpers.py"). These files will help us sort our data into training and validation sets, and create the LMDB databases required by Caffe.
+
+## LMDB 
+[LMDB](https://en.wikipedia.org/wiki/Lightning_Memory-Mapped_Database "LMDB") or Lightning Mapped Database is used by Caffe to store our training/validation data and labels. In the [Classes/CaffeHelpers.py](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Classes/CaffeHelpers.py "Classes/CaffeHelpers.py") file you will find a few functions that will help you convert your dataset into an LMDB database. [Data.py](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Data.py "Data.py") is basically a wrapper around these functions which will do everything you need to do to create your LMDBs.
+
+## Sort ALL_IDB1
+First of all, you need to upload the ALL_IDB1 dataset to the [Model/Data/Train/0](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Caffe/allCNN/Model/Data/Train/0 "Model/Data/Train/0") and [Model/Data/Train/1](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Caffe/allCNN/Model/Data/Train/1 "Model/Data/Train/1") directories, to do this you can take the positive images from ALL_IDB1 (ending in _1.jpg) and add to the Model/Data/Train/1 directory, then do the same for the negative images (ending in _0.jpg).
 
 # Detecting Acute Lymphoblastic Leukemia Using Caffe, OpenVino & Neural Compute Stick Series
 - [Introduction to convolutional neural networks in Caffe](https://software.intel.com/en-us/articles/detecting-acute-lymphoblastic-leukemia-using-caffe-openvino-neural-compute-stick-2-part-1 "Introduction to convolutional neural networks in Caffe")  
