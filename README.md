@@ -9,18 +9,33 @@ The [Acute Myeloid/Lymphoblastic Leukemia Classifier Data Augmentation](https://
 
 | Project  | Description | Status |
 | ------------- | ------------- |  ------------- | 
+| [Caffe](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Caffe/ "Caffe") | AML/ALL classifiers created using the Caffe framework. | Development | 
+| [FastAI](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_FastAI/ "FastAI") | AML/ALL classifiers created using the FastAI framework. | Development | 
 | [Movidius](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Movidius/ "Movidius") | AML/ALL classifiers created using Intel Movidius. | Development | 
 | [OpenVino](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_OpenVino/ "OpenVino") | AML/ALL classifiers created using Intel OpenVino. | Development | 
-| [Tensorflow](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Tensorflow/ "Tensorflow") | AML/ALL classifiers created using the Tensorflow framework. | Development | 
-| [Caffe](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Caffe/ "Caffe") | AML/ALL classifiers created using the Caffe framework. | Development | 
 | [Pure Python](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Pure/ "Pure Python") | AML/ALL classifiers created using pure Python. | Development |
+| [Tensorflow](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Tensorflow/ "Tensorflow") | AML/ALL classifiers created using the Tensorflow framework. | Development | 
 
-# Intel Movidius Projects
+# Intel Movidius/NCS Python Projects
 
-| Project  | Description | Status |
+| Project | Description | Status |
 | ------------- | ------------- |  ------------- | 
-| [Movidius NCS](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS/ "Movidius NCS") | AML/ALL classifiers created using Intel Movidius NCS. | COMPLETED |
+| [Movidius NCS](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS/ "Movidius NCS") | AML/ALL classifiers created using Intel Movidius NCS. | Redevelopment |
 | [Movidius NCS2](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS2/ "Movidius NCS2") | AML/ALL classifiers created using Intel Movidius NCS2 & OpenVino. | Development |
+
+# Detecting Acute Lymphoblastic Leukemia Using Caffe, OpenVino & Neural Compute Stick Series 
+
+- [Introduction to convolutional neural networks in Caffe*](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Caffe-Layers.md "Introduction to convolutional neural networks in Caffe*")
+- [Preparing the Acute Lymphoblastic Leukemia dataset](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Data-Sorting.md "Preparing the Acute Lymphoblastic Leukemia dataset")
+
+# FastAI Python Projects
+
+| Model  | Project  | Description | Status | Author | 
+| -------------  |  ------------- | ------------- | ------------- | ------------- |
+| Resnet  | [FastAI Resnet50 Classifier](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_FastAI/Resnet50/ALL-FastAI-Resnet-50.ipynb "FastAI Resnet50 Classifier") | A FastAI model trained using Resnet50 |  Development | [Salvatore Raieli](https://github.com/salvatorera "Salvatore Raieli") | 
+| Resnet | [FastAI Resnet50(a) Classifier](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_FastAI/Resnet50/ALL-FastAI-Resnet-50-a.ipynb "FastAI Resnet50(a) Classifier") | A FastAI model trained using Resnet50 |  Development | [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") | 
+| Resnet | [FastAI Resnet34 Classifier](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_FastAI/Resnet34 "FastAI Resnet34 Classifier") | A FastAI model trained using Resnet34 |  Development | [Salvatore Raieli](https://github.com/salvatorera "Salvatore Raieli") | 
+| Resnet | [FastAI Resnet18 Classifier](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_FastAI/Resnet18/ALL-FastAI-Resnet-18.ipynb "FastAI Resnet18 Classifier") | A FastAI model trained using Resnet18 |  Development | [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") | 
 
 # Contributing
 We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.
