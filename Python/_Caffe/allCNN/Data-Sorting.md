@@ -69,6 +69,21 @@ In this article we are wanting to replicate the training and validation dataset 
 
 A reminder that we use the [ALL_IDB1 dataset from Acute Lymphoblastic Leukemia Image Database for Image Processing](https://homes.di.unimi.it/scotti/all/ "ALL_IDB1 dataset from Acute Lymphoblastic Leukemia Image Database for Image Processing") dataset, to use this dataset you must request access by visiting [this page](https://homes.di.unimi.it/scotti/all/#download "this page").
 
+### CaffeHelpers
+If you have the latest code from the repository, you should have the file: [Classes/CaffeHelpers.py](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Classes/CaffeHelpers.py "Classes/CaffeHelpers.py") in the [allCNN project directory](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Caffe/allCNN/ "allCNN project directory"). This Python class will be used to handle Caffe related tasks for our network. The three main functions that we use in CaffeHelpers are recreatePaperData(), createTrainingLMDB(), createValidationLMDB() and computeMean().
+
+### recreatePaperData()
+recreatePaperData() is the function that replicates the training and validation datasets using the sizes mentioned in the paper.
+
+### createTrainingLMDB()
+createTrainingLMDB() is the function that converts our training dataset into an LMDB database.
+
+### createValidationLMDB ()
+createValidationLMDB () is the function that converts our validation dataset into an LMDB database.
+
+### computeMean()
+computeMean() is the function that removes the mean of each image.
+
 # Detecting Acute Lymphoblastic Leukemia Using Caffe, OpenVino & Neural Compute Stick Series
 - [Introduction to convolutional neural networks in Caffe](https://software.intel.com/en-us/articles/detecting-acute-lymphoblastic-leukemia-using-caffe-openvino-neural-compute-stick-2-part-1 "Introduction to convolutional neural networks in Caffe")  
 - [Preparing the Acute Lymphoblastic Leukemia dataset](https://www.linkedin.com/pulse/detecting-acute-lymphoblastic-leukemia-using-caffe-2-milton-barker-1f "Preparing the Acute Lymphoblastic Leukemia dataset")  
