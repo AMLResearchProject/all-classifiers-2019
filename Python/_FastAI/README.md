@@ -2,7 +2,7 @@
 ![Acute Myeloid/Lymphoblastic Leukemia Python FastAI Classifiers](../../Media/Images/banner.png)
 The Peter Moss Acute Myeloid/Lymphoblastic Leukemia Python FastAI classifiers are a collection of projects that use computer vision written using FastAI to classify Acute Myeloid/Lymphoblastic Leukemia in unseen images.
 
-The idea of using FastAI for fast prototyping of models was introduced to the project by [Salvatore Raieli](https://github.com/salvatorera "Salvatore Raieli") who provided a Google Colab notebook that used FastAI with [Resnet50](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_FastAI/Resnet50 "Resnet50") and __ALL_IDB1__ from the [Acute Lymphoblastic Leukemia Image Database for Image Processing](https://homes.di.unimi.it/scotti/all/ "Acute Lymphoblastic Leukemia Image Database for Image Processing") dataset. 
+The idea of using FastAI for fast prototyping of models was introduced to the project by [Salvatore Raieli](https://github.com/salvatorera "Salvatore Raieli") who provided a Google Colab notebook that used FastAI with [Resnet50](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_FastAI/Resnet50 "Resnet50") and __ALL_IDB2__ from the [Acute Lymphoblastic Leukemia Image Database for Image Processing](https://homes.di.unimi.it/scotti/all/ "Acute Lymphoblastic Leukemia Image Database for Image Processing") dataset. 
 
 # FastAI Classifier Project Contributors
 
