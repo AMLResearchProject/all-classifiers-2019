@@ -59,7 +59,7 @@ class allCNN():
         Loads the Caffe network using prototxt layer definition.
         """
         
-        self.net = caffe.Net(self.confs["Settings"]["Classifier"]["layerFile"], caffe.TEST)
+        self.net = caffe.Net(self.confs["Settings"]["Classifier"]["Caffe"]["layerFile"], caffe.TEST)
         
         print("")
         self.Helpers.logMessage(self.logFile, "allCNN", "Status", "Caffe net initialized")
@@ -105,18 +105,18 @@ class allCNN():
 
         # Loops through each neuron in the first convolution layer and saves the images in that neuron
         for i in range(30):
-            cv2.imwrite(self.confs["Settings"]["Classifier"]["dataDir"] + self.confs["Settings"]["Classifier"]["infoOutDir"] + 'conv1/out_' + str(i) + '.jpg', 
+            cv2.imwrite(self.confs["Settings"]["Classifier"]["Data"]["dir"] + self.confs["Settings"]["Classifier"]["Info"]["outDir"] + 'conv1/out_' + str(i) + '.jpg', 
                         255 * self.net.blobs['conv1'].data[0,i])
 
         # Loops through each neuron in the second convolution layer and saves the images in that neuron
         for i in range(30):
-            cv2.imwrite(self.confs["Settings"]["Classifier"]["dataDir"] + self.confs["Settings"]["Classifier"]["infoOutDir"] + 'conv2/out_' + str(i) + '.jpg', 
+            cv2.imwrite(self.confs["Settings"]["Classifier"]["Data"]["dir"] + self.confs["Settings"]["Classifier"]["Info"]["outDir"] + 'conv2/out_' + str(i) + '.jpg', 
                         255 * self.net.blobs['conv2'].data[0,i])
 
         self.Helpers.logMessage(self.logFile, 
                                 "allCNN", 
                                 "Output Images", 
-                                "Output images written to " + self.confs["Settings"]["Classifier"]["dataDir"] + self.confs["Settings"]["Classifier"]["infoOutDir"])
+                                "Output images written to " + self.confs["Settings"]["Classifier"]["Data"]["dir"] + self.confs["Settings"]["Classifier"]["Info"]["outDir"])
 
     def saveCaffeNet(self):
 
@@ -124,7 +124,7 @@ class allCNN():
         Saves our Caffe network.
         """
 
-        self.net.save(self.confs["Settings"]["Classifier"]["modelFile"])
+        self.net.save(self.confs["Settings"]["Classifier"]["Model"]["file"])
         
         self.Helpers.logMessage(self.logFile, 
                                 "allCNN", 
@@ -162,7 +162,7 @@ def main(argv):
         """
 
         allCNN.loadCaffeNet()
-        allCNN.writeOutputImages(allCNN.confs["Settings"]["Classifier"]["dataDir"] + allCNN.confs["Settings"]["Classifier"]["dataTestDir"] + allCNN.confs["Settings"]["Classifier"]["infoTestImage"])
+        allCNN.writeOutputImages(allCNN.confs["Settings"]["Classifier"]["Data"]["dir"] + allCNN.confs["Settings"]["Classifier"]["Data"]["dirTest"] + allCNN.confs["Settings"]["Classifier"]["Info"]["testImage"])
 
     elif argv[0] == "Save":
 
