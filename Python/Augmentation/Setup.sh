@@ -3,14 +3,11 @@
 echo "!! This program will set up everything some of the required libraries for this project !!"
 echo " "
 
-echo "-- Upgrading pip3"
-echo " "
-
-pip3 install --user --upgrade pip
-
 echo "-- Installing requirements"
 echo " "
 
+
+pip3 install --user  opencv-python==3.4.5.20
 pip3 install --user JumpWayMQTT
 pip3 install --user requests
 pip3 install --user flask
