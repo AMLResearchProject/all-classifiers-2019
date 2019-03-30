@@ -1,11 +1,13 @@
 # Acute Myeloid/Lymphoblastic Leukemia Classifiers
-![Peter Moss Acute Myeloid/Lymphoblastic Leukemia Detection System](Media/Images/banner.png)
+![Peter Moss Acute Myeloid/Lymphoblastic Leukemia Classifiers](Media/Images/banner.png)
 The Peter Moss Acute Myeloid/Lymphoblastic Leukemia classifiers are a collection of projects that use computer vision to classify Acute Myeloid/Lymphoblastic Leukemia in unseen images. The projects include classifiers made with Tensorflow, Caffe, Intel Movidius (NCS & NCS2), OpenVino and pure Python classifiers. 
 
 # Data Augmentation
-The [Acute Myeloid/Lymphoblastic Leukemia Classifier Data Augmentation](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/Augmentation "Acute Myeloid/Lymphoblastic Leukemia Classifier Data Augmentation") program applies filters to datasets and increases the amount of training / test data.
+![Acute Myeloid/Lymphoblastic Leukemia Classifier Data Augmentation program](Python/Augmentation/Media/Images/banner.png)
+The [Acute Myeloid/Lymphoblastic Leukemia Classifier Data Augmentation program](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/Augmentation "Acute Myeloid/Lymphoblastic Leukemia Classifier Data Augmentation program") applies filters to datasets and increases the amount of training / test data.
 
-# Python Projects
+# Python Classifiers
+This repository hosts a collection of classifiers that have been developed by the team using the Python programming language.  These classifiers include Caffe, FastAI, Movidius, OpenVino, pure Python and Tensorflow classifiers. 
 
 | Project  | Description | Status |
 | ------------- | ------------- |  ------------- | 
@@ -16,19 +18,16 @@ The [Acute Myeloid/Lymphoblastic Leukemia Classifier Data Augmentation](https://
 | [Pure Python](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Pure/ "Pure Python") | AML/ALL classifiers created using pure Python. | Development |
 | [Tensorflow](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Tensorflow/ "Tensorflow") | AML/ALL classifiers created using the Tensorflow framework. | Development | 
 
-# Intel Movidius/NCS Python Projects
+## Intel Movidius/NCS Python Classifiers
+This repository hosts a collection of classifiers that have been developed by the team using Python and Intel NCS/NCS2. 
 
 | Project | Description | Status |
 | ------------- | ------------- |  ------------- | 
 | [Movidius NCS](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS/ "Movidius NCS") | AML/ALL classifiers created using Intel Movidius NCS. | Redevelopment |
 | [Movidius NCS2](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS2/ "Movidius NCS2") | AML/ALL classifiers created using Intel Movidius NCS2 & OpenVino. | Development |
 
-# Detecting Acute Lymphoblastic Leukemia Using Caffe, OpenVino & Neural Compute Stick Series 
-
-- [Introduction to convolutional neural networks in Caffe*](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Caffe-Layers.md "Introduction to convolutional neural networks in Caffe*")
-- [Preparing the Acute Lymphoblastic Leukemia dataset](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Data-Sorting.md "Preparing the Acute Lymphoblastic Leukemia dataset")
-
-# FastAI Python Projects
+## FastAI Python Classifiers
+This repository hosts a collection of classifiers that have been developed by the team using Google Colabs and FastAI. 
 
 | Model  | Project  | Description | Status | Author | 
 | -------------  |  ------------- | ------------- | ------------- | ------------- |
@@ -37,8 +36,15 @@ The [Acute Myeloid/Lymphoblastic Leukemia Classifier Data Augmentation](https://
 | Resnet | [FastAI Resnet34 Classifier](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_FastAI/Resnet34 "FastAI Resnet34 Classifier") | A FastAI model trained using Resnet34 |  Development | [Salvatore Raieli](https://github.com/salvatorera "Salvatore Raieli") | 
 | Resnet | [FastAI Resnet18 Classifier](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_FastAI/Resnet18/ALL_FastAI_Resnet_18.ipynb "FastAI Resnet18 Classifier") | A FastAI model trained using Resnet18 |  Development | [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") | 
 
+## Detecting Acute Lymphoblastic Leukemia Using Caffe, OpenVino & Neural Compute Stick Series 
+A series of articles / tutorials by [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") that take you through attempting to replicate the work carried out in the [Acute Myeloid Leukemia Classification Using Convolution Neural Network In Clinical Decision Support System](https://airccj.org/CSCP/vol7/csit77505.pdf "Acute Myeloid Leukemia Classification Using Convolution Neural Network In Clinical Decision Support System") paper.
+
+- [Introduction to convolutional neural networks in Caffe*](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Caffe-Layers.md "Introduction to convolutional neural networks in Caffe*")
+- [Preparing the Acute Lymphoblastic Leukemia dataset](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Data-Sorting.md "Preparing the Acute Lymphoblastic Leukemia dataset")
+
 # Contributing
-We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.
+![Pull requests](Media/Images/Contributing-Pull-Requests.jpg)
+The Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research project encourages and welcomes code contributions, bug fixes and enhancements from the community to the Github repositories. Please read the [CONTRIBUTING](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull request. You will also find on our code of conduct.
 
 # Versioning
 We use SemVer for versioning. For the versions available, see [Releases](https://github.com/AMLResearchProject/AML-ALL-Classifiers/releases "Releases").
