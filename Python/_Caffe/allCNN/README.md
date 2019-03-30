@@ -24,9 +24,8 @@ __ALL_IDB1__ from the [Acute Lymphoblastic Leukemia Image Database for Image Pro
 # Contributing
 The Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research project encourages and welcomes code contributions, bug fixes and enhancements from the community to the Github repositories. Please read the [CONTRIBUTING](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull request. You will also find information about our code of conduct on this page.
 
-## Acute Myeloid/Lymphoblastic Leukemia Classifiers Contributors
+## Acute Lymphoblastic Leukemia Convolutional Neural Network Contributors
 
-- [Salvatore Raieli](https://github.com/salvatorera "Salvatore Raieli") - PhD Immunolgy / Bioinformaticia, Bologna, Italy
 - [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") - Bigfinite IoT Network Engineer & Intel Software Innovator, Barcelona, Spain
 
 &nbsp;
