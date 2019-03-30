@@ -3,7 +3,7 @@
 The Peter Moss Acute Myeloid/Lymphoblastic Leukemia classifiers are a collection of projects that use computer vision to classify Acute Myeloid/Lymphoblastic Leukemia in unseen images. The projects include classifiers made with Tensorflow, Caffe, Intel Movidius (NCS & NCS2), OpenVino and pure Python classifiers. 
 
 # Data Augmentation
-![Acute Myeloid/Lymphoblastic Leukemia Classifier Data Augmentation program](Augmentation/Media/Images/banner.png)
+![Acute Myeloid/Lymphoblastic Leukemia Classifier Data Augmentation program](Python/Augmentation/Media/Images/banner.png)
 The [Acute Myeloid/Lymphoblastic Leukemia Classifier Data Augmentation program](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/Augmentation "Acute Myeloid/Lymphoblastic Leukemia Classifier Data Augmentation program") applies filters to datasets and increases the amount of training / test data.
 
 # Python Classifiers
