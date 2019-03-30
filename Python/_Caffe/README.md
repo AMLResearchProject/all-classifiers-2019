@@ -18,7 +18,6 @@ The Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research project encourag
 
 ## Acute Myeloid/Lymphoblastic Leukemia Classifiers Contributors
 
-- [Salvatore Raieli](https://github.com/salvatorera "Salvatore Raieli") - PhD Immunolgy / Bioinformaticia, Bologna, Italy
 - [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") - Bigfinite IoT Network Engineer & Intel Software Innovator, Barcelona, Spain
 
 &nbsp;
