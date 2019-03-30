@@ -9,12 +9,12 @@ This repository hosts a collection of classifiers that have been developed by th
 
 | Projects  | Language | Description | Status |
 | ------------- | ------------- | ------------- | ------------- | 
-| [Caffe](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Caffe/ "Caffe") | Python | AML/ALL classifiers created using the Caffe framework. | Development | 
-| [FastAI](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_FastAI/ "FastAI") | Python | AML/ALL classifiers created using the FastAI framework. | Development | 
-| [Movidius](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Movidius/ "Movidius") | Python | AML/ALL classifiers created using Intel Movidius. | Development | 
-| [OpenVino](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_OpenVino/ "OpenVino") | Python | AML/ALL classifiers created using Intel OpenVino. | Development | 
-| [Pure Python](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Pure/ "Pure Python") | Python | AML/ALL classifiers created using pure Python. | Development |
-| [Tensorflow](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Tensorflow/ "Tensorflow") | Python | AML/ALL classifiers created using the Tensorflow framework. | Development | 
+| [Caffe Classifiers](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Caffe/ "Caffe") | Python | AML/ALL classifiers created using the Caffe framework. | Development | 
+| [FastAI Classifiers](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_FastAI/ "FastAI") | Python | AML/ALL classifiers created using the FastAI framework. | Development | 
+| [Movidius Classifiers](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Movidius/ "Movidius") | Python | AML/ALL classifiers created using Intel Movidius. | Development | 
+| [OpenVino Classifiers](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_OpenVino/ "OpenVino") | Python | AML/ALL classifiers created using Intel OpenVino. | Development | 
+| [Pure Python Classifiers](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Pure/ "Pure Python") | Python | AML/ALL classifiers created using pure Python. | Development |
+| [Tensorflow Classifiers](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Tensorflow/ "Tensorflow") | Python | AML/ALL classifiers created using the Tensorflow framework. | Development | 
 
 &nbsp;
 
@@ -22,7 +22,7 @@ This repository hosts a collection of classifiers that have been developed by th
 This repository hosts a collection of classifiers that have been developed by the team using Python and Intel NCS/NCS2. 
 
 | Project | Language | Description | Status |
-| ------------- | ------------- |  ------------- | 
+| ------------- | ------------- |  ------------- |  ------------- | 
 | [Movidius NCS](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS/ "Movidius NCS") | Python | AML/ALL classifiers created using Intel Movidius NCS. | Redevelopment |
 | [Movidius NCS2](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Movidius/NCS2/ "Movidius NCS2") | Python | AML/ALL classifiers created using Intel Movidius NCS2 & OpenVino. | Development |
 
@@ -32,7 +32,7 @@ This repository hosts a collection of classifiers that have been developed by th
 The Peter Moss Acute Myeloid/Lymphoblastic Leukemia Python FastAI classifier projects are a collection of projects that use computer vision programs written using FastAI to classify Acute Myeloid/Lymphoblastic Leukemia in unseen images.
 
 | Model  | Project | Language | Description | Status | Author | 
-| -------------  |  ------------- | ------------- | ------------- | ------------- |
+| -------------  |  ------------- | ------------- | ------------- | ------------- | ------------- |
 | Resnet  | [FastAI Resnet50 Classifier](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_FastAI/Resnet50/ALL-FastAI-Resnet-50.ipynb "FastAI Resnet50 Classifier") | Python | A FastAI model trained using Resnet50 |  Development | [Salvatore Raieli](https://github.com/salvatorera "Salvatore Raieli") / [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") | 
 | Resnet | [FastAI Resnet50(a) Classifier](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_FastAI/Resnet50/ALL-FastAI-Resnet-50-a.ipynb "FastAI Resnet50(a) Classifier") | Python | A FastAI model trained using Resnet50 |  Development | [Salvatore Raieli](https://github.com/salvatorera "Salvatore Raieli") / [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") | 
 | Resnet | [FastAI Resnet34 Classifier](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_FastAI/Resnet34/ALL-FastAI-Resnet-34.ipynb "FastAI Resnet34 Classifier") | Python | A FastAI model trained using Resnet34 |  Development | [Salvatore Raieli](https://github.com/salvatorera "Salvatore Raieli") / [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") | 
