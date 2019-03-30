@@ -2,19 +2,34 @@
 ![Acute Lymphoblastic Leukemia Convolutional Neural Network](../../../Media/Images/banner.png)
 The Peter Moss Acute Lymphoblastic Leukemia Convolutional Neural Network is a Caffe network created by following the work in the research paper: [Acute Myeloid Leukemia Classification Using Convolution Neural Network In Clinical Decision Support System](https://airccj.org/CSCP/vol7/csit77505.pdf "Acute Myeloid Leukemia Classification Using Convolution Neural Network In Clinical Decision Support System"). 
 
+&nbsp;
+
 ## Network Layers
-The network uses prototxt files to define the network layers.
+The Acute Lymphoblastic Leukemia Convolutional Neural Network uses prototxt files to define the network layers.
+
+&nbsp;
 
 ## Training Data
 __ALL_IDB1__ from the [Acute Lymphoblastic Leukemia Image Database for Image Processing](https://homes.di.unimi.it/scotti/all/ "Acute Lymphoblastic Leukemia Image Database for Image Processing") datasets is used in this project, to use this dataset you must request access by visiting [this section of the website](https://homes.di.unimi.it/scotti/all/#download "this section of the website").
+
+&nbsp;
 
 # Detecting Acute Lymphoblastic Leukemia Using Caffe, OpenVino & Neural Compute Stick Series 
 
 - [Introduction to convolutional neural networks in Caffe*](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Caffe-Layers.md "Introduction to convolutional neural networks in Caffe*")
 - [Preparing the Acute Lymphoblastic Leukemia dataset](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Data-Sorting.md "Preparing the Acute Lymphoblastic Leukemia dataset")
 
+&nbsp;
+
 # Contributing
-We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.
+The Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research project encourages and welcomes code contributions, bug fixes and enhancements from the community to the Github repositories. Please read the [CONTRIBUTING](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull request. You will also find information about our code of conduct on this page.
+
+## Acute Myeloid/Lymphoblastic Leukemia Classifiers Contributors
+
+- [Salvatore Raieli](https://github.com/salvatorera "Salvatore Raieli") - PhD Immunolgy / Bioinformaticia, Bologna, Italy
+- [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") - Bigfinite IoT Network Engineer & Intel Software Innovator, Barcelona, Spain
+
+&nbsp;
 
 # Versioning
 We use SemVer for versioning. For the versions available, see [Releases](https://github.com/AMLResearchProject/AML-ALL-Classifiers/releases "Releases").
@@ -24,6 +39,8 @@ This project is licensed under the **MIT License** - see the [LICENSE](https://g
 
 # Bugs/Issues
 We use the [repo issues](https://github.com/AMLResearchProject/AML-ALL-Classifiers/issues "repo issues") to track bugs and general requests related to using this project.  
+
+&nbsp;
 
 # Project Author
 Adam is a [BigFinite](https://www.bigfinite.com "BigFinite") IoT Network Engineer, part of the team that works on the core IoT software. In his spare time he is an [Intel Software Innovator](https://software.intel.com/en-us/intel-software-innovators/overview "Intel Software Innovator") in the fields of Internet of Things, Artificial Intelligence and Virtual Reality.
