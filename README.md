@@ -43,7 +43,7 @@ A series of articles / tutorials by [Adam Milton-Barker](https://github.com/Adam
 - [Preparing the Acute Lymphoblastic Leukemia dataset](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Data-Sorting.md "Preparing the Acute Lymphoblastic Leukemia dataset")
 
 # Contributing
-![Acute Myeloid/Lymphoblastic Leukemia Classifier Data Augmentation program](Media/Images/Contributing-Fork.jpg)
+![Feature Proposal](Media/Images/Contributing-Feature-Proposal.jpg)
 The Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research project encourages and welcomes code contributions, bug fixes and enhancements from the community to the Github repositories. Please read the [CONTRIBUTING](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull request. You will also find on our code of conduct.
 
 # Versioning
