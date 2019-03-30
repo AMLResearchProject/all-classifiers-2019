@@ -4,13 +4,6 @@ The Peter Moss Acute Myeloid/Lymphoblastic Leukemia classifiers are a collection
 
 &nbsp;
 
-
-# Data Augmentation
-![Acute Myeloid/Lymphoblastic Leukemia Classifier Data Augmentation program](Python/Augmentation/Media/Images/bannerThin.png)
-The [Acute Myeloid/Lymphoblastic Leukemia Classifier Data Augmentation program](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/Augmentation "Acute Myeloid/Lymphoblastic Leukemia Classifier Data Augmentation program") applies filters to datasets and increases the amount of training / test data.
-
-&nbsp;
-
 # Python Classifiers
 This repository hosts a collection of classifiers that have been developed by the team using the Python programming language.  These classifiers include Caffe, FastAI, Movidius, OpenVino, pure Python and Tensorflow classifiers. 
 
@@ -36,14 +29,20 @@ This repository hosts a collection of classifiers that have been developed by th
 &nbsp;
 
 ## FastAI Python Classifiers
-This repository hosts a collection of classifiers that have been developed by the team using Google Colabs and FastAI. 
+The Peter Moss Acute Myeloid/Lymphoblastic Leukemia Python FastAI classifier projects are a collection of projects that use computer vision programs written using FastAI to classify Acute Myeloid/Lymphoblastic Leukemia in unseen images.
 
 | Model  | Project  | Description | Status | Author | 
 | -------------  |  ------------- | ------------- | ------------- | ------------- |
-| Resnet  | [FastAI Resnet50 Classifier](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_FastAI/Resnet50/ALL-FastAI-Resnet-50.ipynb "FastAI Resnet50 Classifier") | A FastAI model trained using Resnet50 |  Development | [Salvatore Raieli](https://github.com/salvatorera "Salvatore Raieli") | 
-| Resnet | [FastAI Resnet50(a) Classifier](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_FastAI/Resnet50/ALL-FastAI-Resnet-50-a.ipynb "FastAI Resnet50(a) Classifier") | A FastAI model trained using Resnet50 |  Development | [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") | 
-| Resnet | [FastAI Resnet34 Classifier](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_FastAI/Resnet34 "FastAI Resnet34 Classifier") | A FastAI model trained using Resnet34 |  Development | [Salvatore Raieli](https://github.com/salvatorera "Salvatore Raieli") | 
-| Resnet | [FastAI Resnet18 Classifier](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_FastAI/Resnet18/ALL_FastAI_Resnet_18.ipynb "FastAI Resnet18 Classifier") | A FastAI model trained using Resnet18 |  Development | [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") | 
+| Resnet  | [FastAI Resnet50 Classifier](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_FastAI/Resnet50/ALL-FastAI-Resnet-50.ipynb "FastAI Resnet50 Classifier") | A FastAI model trained using Resnet50 |  Development | [Salvatore Raieli](https://github.com/salvatorera "Salvatore Raieli") / [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") | 
+| Resnet | [FastAI Resnet50(a) Classifier](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_FastAI/Resnet50/ALL-FastAI-Resnet-50-a.ipynb "FastAI Resnet50(a) Classifier") | A FastAI model trained using Resnet50 |  Development | [Salvatore Raieli](https://github.com/salvatorera "Salvatore Raieli") / [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") | 
+| Resnet | [FastAI Resnet34 Classifier](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_FastAI/Resnet34/ALL-FastAI-Resnet-34.ipynb "FastAI Resnet34 Classifier") | A FastAI model trained using Resnet34 |  Development | [Salvatore Raieli](https://github.com/salvatorera "Salvatore Raieli") / [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") | 
+| Resnet | [FastAI Resnet18 Classifier](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_FastAI/Resnet18/ALL_FastAI_Resnet_18.ipynb "FastAI Resnet18 Classifier") | A FastAI model trained using Resnet18 |  Development | [Salvatore Raieli](https://github.com/salvatorera "Salvatore Raieli") / [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") | 
+
+&nbsp;
+
+# Data Augmentation
+![Acute Myeloid/Lymphoblastic Leukemia Classifier Data Augmentation program](Python/Augmentation/Media/Images/bannerThin.png)
+The [Acute Myeloid/Lymphoblastic Leukemia Classifier Data Augmentation program](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/Augmentation "Acute Myeloid/Lymphoblastic Leukemia Classifier Data Augmentation program") applies filters to datasets and increases the amount of training / test data.
 
 &nbsp;
 
@@ -58,6 +57,11 @@ A series of articles / tutorials by [Adam Milton-Barker](https://github.com/Adam
 # Contributing
 ![Pull requests](Media/Images/Contributing-Pull-Requests.jpg)
 The Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research project encourages and welcomes code contributions, bug fixes and enhancements from the community to the Github repositories. Please read the [CONTRIBUTING](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull request. You will also find on our code of conduct.
+
+## Acute Myeloid/Lymphoblastic Leukemia Classifiers Contributors
+
+- [Salvatore Raieli](https://github.com/salvatorera "Salvatore Raieli") - PhD Immunolgy / Bioinformaticia, Bologna, Italy
+- [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") - Bigfinite IoT Network Engineer & Intel Software Innovator, Barcelona, Spain
 
 # Versioning
 We use SemVer for versioning. For the versions available, see [Releases](https://github.com/AMLResearchProject/AML-ALL-Classifiers/releases "Releases").
