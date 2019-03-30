@@ -22,6 +22,7 @@ If you are going to be contributing code or documentation to the repository you 
 When you have made your changes, you need to push them to your forked repository. This process requires a commit with a message about what your commit is, and then finally a push to the repository which will place your changes or created files to your forked repository.
 
 # Pull requests
+![Pull requests](Media/Images/Contributing-Pull-Requests.jpg)
 When you are satisfied with your changes you can submit a pull request that will request that your changes be pulled into the latest development branch. 
 
 ## Pull Request Process
