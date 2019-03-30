@@ -55,8 +55,7 @@ A series of articles / tutorials by [Adam Milton-Barker](https://github.com/Adam
 &nbsp;
 
 # Contributing
-![Pull requests](Media/Images/Contributing-Pull-Requests.jpg)
-The Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research project encourages and welcomes code contributions, bug fixes and enhancements from the community to the Github repositories. Please read the [CONTRIBUTING](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull request. You will also find on our code of conduct.
+The Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research project encourages and welcomes code contributions, bug fixes and enhancements from the community to the Github repositories. Please read the [CONTRIBUTING](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull request. You will also find information about our code of conduct on this page.
 
 ## Acute Myeloid/Lymphoblastic Leukemia Classifiers Contributors
 
