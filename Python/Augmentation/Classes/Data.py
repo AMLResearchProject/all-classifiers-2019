@@ -265,7 +265,7 @@ class Data():
                         print("File was not jpg! "+filename)
                         continue
                         
-                print(" AML/ALL Augmentation: " + self.Helpers.currentDateTime())
+                print("AML/ALL Augmentation: " + self.Helpers.currentDateTime())
                 print("Added filters to " + str(fCount) + " files in the " + str(directory) + " directory")
                 print("Total of " + str(self.filesMade) + " augmented files created.")
                 print("")
