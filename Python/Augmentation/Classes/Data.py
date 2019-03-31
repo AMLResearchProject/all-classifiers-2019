@@ -2,7 +2,7 @@
 #
 # The MIT License (MIT)
 # 
-# Peter Moss Acute Myeloid/Lymphoblastic Leukemia Research Project
+# Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research Project
 # Copyright (C) 2018 Adam Milton-Barker (AdamMiltonBarker.com)
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,11 +23,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 #
-# Title:         Augmentation Data Helpers
-# Description:   Helpers for data augmentation used with the Acute Myeloid/Lymphoblastic Leukemia Classifier.
-# Configuration: required/confs.json
-#
-# Last Modified: 2019-02-22
+# Title:         Data Augmentation Data Helpers
+# Description:   Data helper functions used by the data augmentation program.
+# Configuration: Required/Confs.json
+# Last Modified: 2019-03-31
 #
 ############################################################################################
 
@@ -43,13 +42,11 @@ from Classes.Helpers import Helpers
 class Data():
     
     def __init__(self):
-        
-        ###############################################################
-        #
-        # Sets up all default requirements and placeholders 
-        # needed for the Acute Myeloid Leukemia Classifier. 
-        #
-        ###############################################################
+
+        """
+        Sets up all default requirements and placeholders 
+        needed for this class. 
+        """
         
         self.Helpers = Helpers()
         self.confs = self.Helpers.loadConfs()
@@ -59,12 +56,10 @@ class Data():
         self.trainingDir = self.confs["Settings"]["TrainDir"]
         
     def writeImage(self, filename, image):
-        
-        ###############################################################
-        #
-        # Writes an image based on the filepath and the image provided. 
-        #
-        ###############################################################
+
+        """
+        Writes an image based on the filepath and the image provided.
+        """
 
         if filename is None:
             print("Filename does not exist, file cannot be written.")
@@ -80,12 +75,10 @@ class Data():
             print("File was not written! "+filename)
         
     def resize(self, filePath, savePath, show = False):
-        
-        ###############################################################
-        #
-        # Writes an image based on the filepath and the image provided. 
-        #
-        ###############################################################
+
+        """
+        Writes an image based on the filepath and the image provided. 
+        """
 
         image = cv2.resize(cv2.imread(filePath), self.fixed)
         self.writeImage(savePath, image)
@@ -99,12 +92,10 @@ class Data():
         return image
 
     def grayScale(self, image, grayPath, show = False):
-        
-        ###############################################################
-        #
-        # Writes a grayscale copy of the image to the filepath provided. 
-        #
-        ###############################################################
+
+        """
+        Writes a grayscale copy of the image to the filepath provided. 
+        """
         
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         self.writeImage(grayPath, gray)
@@ -118,13 +109,10 @@ class Data():
         return image, gray
 
     def equalizeHist(self, gray, histPath, show = False):
-        
-        ###############################################################
-        #
-        # Writes histogram equalized copy of the image to the filepath 
-        # provided. 
-        #
-        ###############################################################
+
+        """
+        Writes histogram equalized copy of the image to the filepath provided. 
+        """
         
         hist = cv2.equalizeHist(gray)
         self.writeImage(histPath, cv2.equalizeHist(gray))
@@ -138,13 +126,10 @@ class Data():
         return hist
 
     def reflection(self, image, horPath, verPath, show = False):
-        
-        ###############################################################
-        #
-        # Writes histogram equalized copy of the image to the filepath 
-        # provided. 
-        #
-        ###############################################################
+
+        """
+        Writes reflected copies of the image to the filepath provided. 
+        """
         
         horImg = cv2.flip(image, 0)
         self.writeImage(horPath, horImg)
@@ -167,13 +152,10 @@ class Data():
         return horImg, verImg
 
     def gaussian(self, filePath, gaussianPath, show = False):
-        
-        ###############################################################
-        #
-        # Writes gaussian blurred copy of the image to the filepath 
-        # provided. 
-        #
-        ###############################################################
+
+        """
+        Writes gaussian blurred copy of the image to the filepath provided. 
+        """
         
         gaussianBlur = ndimage.gaussian_filter(plt.imread(filePath), sigma=5.11)
         self.writeImage(gaussianPath, gaussianBlur)
@@ -183,57 +165,62 @@ class Data():
         if show is True:
             plt.imshow(gaussianBlur)
             plt.show()
-
+            
         return gaussianBlur
+            
+    def translate(self, image, filePath, show = False):
 
-    def translate(self, image, translatedPath, show = False):
+        """
+        Writes transformed copy of the image to the filepath provided. 
+        """
+        
+        cols, rows, chs = image.shape
 
-        y, x, c = image.shape
-        translated = cv2.warpAffine(image, np.float32([[1, 0, 84], [0, 1, 56]]), (x, y))
-        self.writeImage(translatedPath, translated)
+        translated = cv2.warpAffine(image, np.float32([[1, 0, 84], [0, 1, 56]]), (rows, cols), 
+                                    borderMode=cv2.BORDER_CONSTANT, borderValue=(144, 159, 162))
+        
+        self.writeImage(filePath, translated)
         self.filesMade += 1
-        print("Translated image written to: " + translatedPath)
+        print("Translated image written to: " + filePath)
 
         if show is True:
             plt.imshow(translated)
             plt.show()
-
+            
         return translated
         
     def rotation(self, path, filePath, filename, show = False): 
-        
-        ###############################################################
-        #
-        # Writes rotated copies of the image to the filepath 
-        # provided. 
-        #
-        ###############################################################
+
+        """
+        Writes rotated copies of the image to the filepath provided. 
+        """
         
         img = Image.open(filePath)
 
+        image = cv2.imread(filePath)
+        cols, rows, chs = image.shape
+
         for i in range(0, 20):
             randDeg = random.randint(-180, 180)
+            matrix = cv2.getRotationMatrix2D((cols/2, rows/2), randDeg, 0.70)
+            rotated = cv2.warpAffine(image, matrix, (rows, cols), borderMode=cv2.BORDER_CONSTANT, 
+                                         borderValue=(144, 159, 162))
             fullPath = os.path.join(path, str(randDeg) + '-' + str(i) + '-' + filename)
+        
+            self.writeImage(fullPath, rotated)
+            self.filesMade += 1
+            print("Rotated image written to: " + fullPath)
 
-            try:
-                if show is True:
-                    img.rotate(randDeg, expand=True).resize((self.confs["Settings"]["ImgDims"], self.confs["Settings"]["ImgDims"])).save(fullPath).show()
-                    self.filesMade += 1
-                else:
-                    img.rotate(randDeg, expand=True).resize((self.confs["Settings"]["ImgDims"], self.confs["Settings"]["ImgDims"])).save(fullPath)
-                    self.filesMade += 1
-                print("Rotated image written to: " + fullPath)
-            except:
-                print("File was not written! "+filename)
+            if show is True:
+                plt.imshow(rotated)
+                plt.show()
 
     def processDataset(self):
-        
-        ###############################################################
-        #
-        # Runs all of the above functions saving the new dataset to the
-        # default training directory. 
-        #
-        ###############################################################
+
+        """
+        Runs all of the above functions saving the new dataset to the 
+        Augmented directory. 
+        """
         
         for directory in os.listdir(self.trainingDir):
             
@@ -267,8 +254,8 @@ class Data():
                                                          os.path.join(sortedPath, "Ver-"+filename), False)
                         
                         gaussianBlur = self.gaussian(fileSortedPath, os.path.join(sortedPath, "Gaus-"+filename), False)
-
-                        translated = self.translate(image, os.path.join(sortedPath, "Trans-"+filename))
+                        
+                        translated = self.translate(image, os.path.join(sortedPath, "Trans-"+filename), False)
                         
                         self.rotation(sortedPath, fileSortedPath, filename)
                         fCount += 1
@@ -278,5 +265,7 @@ class Data():
                         print("File was not jpg! "+filename)
                         continue
                         
-                print(" AML/ALL Augmentation: " + self.Helpers.currentDateTime() + "  - Added filters to " + str(fCount) + " files in the " + str(directory) + " directory, with a total of " + str(self.filesMade) + " augmented files created.")
+                print("AML/ALL Augmentation: " + self.Helpers.currentDateTime())
+                print("Added filters to " + str(fCount) + " files in the " + str(directory) + " directory")
+                print("Total of " + str(self.filesMade) + " augmented files created.")
                 print("")

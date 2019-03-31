@@ -2,7 +2,7 @@
 #
 # The MIT License (MIT)
 # 
-# Peter Moss Acute Myeloid Leukemia Research Project
+# Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research Project
 # Copyright (C) 2018 Adam Milton-Barker (AdamMiltonBarker.com)
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,10 +23,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 #
-# Title:         Acute Myeloid Leukemia Classifier Tools
-# Description:   Common tools used by the Acute Myeloid Leukemia Classifier.
-# Configuration: required/confs.json
-# Last Modified: 2018-11-24
+# Title:         Data Augmentation Helpers
+# Description:   Common helper functions used by the data augmentation program.
+# Configuration: Required/Confs.json
+# Last Modified: 2019-03-31
 #
 ############################################################################################
 
@@ -37,23 +37,19 @@ from datetime import datetime
 class Helpers():
     
     def __init__(self):
-        
-        ###############################################################
-        #
-        # Sets up all default requirements and placeholders 
-        # needed for the Acute Myeloid Leukemia Classifier. 
-        #
-        ###############################################################
+
+        """
+        Sets up all default requirements and placeholders 
+        needed for this class. 
+        """
         
         pass
     
     def loadConfs(self):
-        
-        ###############################################################
-        #
-        # Load the AML DNN Classifier configuration. 
-        #
-        ###############################################################
+
+        """
+        Load the configuration settings. 
+        """
 
         confs = {}
         with open('Required/confs.json') as confs:
@@ -61,52 +57,41 @@ class Helpers():
         return confs
     
     def currentDateTime(self):
-        
-        ###############################################################
-        #
-        # Gets the current date and time in words. 
-        #
-        ###############################################################
+
+        """
+        Gets the current date and time in words. 
+        """
         
         return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
     def timerStart(self):
-        
-        ###############################################################
-        #
-        # Starts the timer
-        #
-        ###############################################################
+
+        """
+        Starts the timer. 
+        """
 
         return str(datetime.now()), time.time()
 
     def timerEnd(self, start):
 
-        ###############################################################
-        #
-        # Ends the timer
-        #
-        ###############################################################
-
+        """
+        Ends the timer.
+        """
         return time.time(), (time.time() - start), str(datetime.now())
 
     def setLogFile(self, path):
 
-        ###############################################################
-        #
-        # Sets a log file path
-        #
-        ###############################################################
+        """
+        Sets a log file path.
+        """
         
         return path + datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d-%H-%M-%S') + ".txt"
         
     def logMessage(self, logfile, process, messageType, message, hide = False):
 
-        ###############################################################
-        #
-        # Logs a message to a log file
-        #
-        ###############################################################
+        """
+        Logs a message to a log file.
+        """
 
         logString = datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S') + "|" + process + "|" + messageType + ": " + message
         with open(logfile,"a") as logLine:

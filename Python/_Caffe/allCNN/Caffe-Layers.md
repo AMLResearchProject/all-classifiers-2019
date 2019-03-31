@@ -38,7 +38,11 @@ __This tutorial can be found on the following platforms:__
 •	Intel OpenVino required if using NCS2
 
 ## Caffe Installation:
-In my case I installed Caffe on an UP2, but as stated above this is not a requirement. During installation I ran into issues whilst following the Caffe Ubuntu 16.04 installation guide, which led me to find the following tutorial. To install on Ubuntu 16.04, follow this article which will take you through installing all required dependencies and installing PyCaffe. If you are installing on an UP2 or similar this may take some time.
+In my case I installed Caffe on an UP2, but as stated above this is not a requirement. During installation I ran into issues whilst following the [Caffe Ubuntu 16.04 installation guide](http://caffe.berkeleyvision.org/install_apt.html "Caffe Ubuntu 16.04 installation guide"), which led me to find the following tutorial. 
+
+[Follow this tutorial to install Caffe & PyCaffe Ubuntu 16.04](http://caffe.berkeleyvision.org/install_apt.html "Follow this article to install Caffe & PyCaffe Ubuntu 16.04") (Not tested in other OS). If the tutorial did not work for you, you will need to work out how to install Caffe and PyCaffe on your development machine and then come back to this tutorial, installing and debugging Caffe installation is out of the scope of this tutorial.
+ 
+_If you are installing on an UP2 or similar this may take some time._
 
 ![Caffe Installation](Media/Images/Caffe-installation.jpg)  
 _Figure 1. Caffe Installation_
