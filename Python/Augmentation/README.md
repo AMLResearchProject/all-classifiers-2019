@@ -240,8 +240,6 @@ Gaussian Blur is a popular technique used on images and is especially popular in
 - Requires PIP3
 - Jupyter Notebook
 
-&nbsp;
-
 # Installation
 Below is a guide on how to install the augmentation program on your device, as mentioned above the program has been tested with Ubuntu 18.04 & 16.04, but may work on other versions of Linux and possibly Windows.
 
@@ -265,10 +263,14 @@ If you have problems running the above program and have errors try run the follo
  $ sh setup.sh
 ```
 
+&nbsp;
+
 ## Sort your dataset
 The ALL IDB_1 dataset is the one used in this tutorial. In this dataset there were 49 negative and 59 positive. To make this even I removed 10 images from the positive dataset. From here I removed a further 10 images per class for testing further on in the tutorial and for the purpose of demos etc. In my case I ended up with 20 test images (10 pos/10 neg) and 39 images per class ready for augmentation. Place the original images that you wish to augment into the __Model/Data/0__ & __Model/Data/1__. Using this program I was able to create a dataset of __624__ positive and __624__ negative augmented images.
 
-You are now ready to move onto starting your Jupyter Notebook server!
+You are now ready to move onto starting your Jupyter Notebook server or run the local program!
+
+&nbsp;
 
 ## Jupyter Notebook
 You need to make sure you have Jupyter Notebook installed, you can use the following commands to install Jupyter, if you are unsure if you have it installed you can run the commands and it will tell you if you already have it installed and exit the download. 
@@ -306,7 +308,7 @@ Using data augmentation I was able to increase the dataset from 39 images per cl
 # Contributing
 The Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research project encourages and welcomes code contributions, bug fixes and enhancements from the community to the Github repositories. Please read the [CONTRIBUTING](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull request. You will also find information about our code of conduct on this page.
 
-## Acute Lymphoblastic Leukemia Convolutional Neural Network Contributors
+## Acute Myeloid/Lymphoblastic Leukemia Classifier Data Augmentation Program Contributors
 
 - [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") - Bigfinite IoT Network Engineer & Intel Software Innovator, Barcelona, Spain
 
