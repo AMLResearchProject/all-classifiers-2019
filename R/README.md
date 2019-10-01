@@ -1,29 +1,18 @@
 # Peter Moss Acute Myeloid & Lymphoblastic Leukemia AI Research Project
 
-## Acute Lymphoblastic Leukemia Convolutional Neural Network
+## R AML & ALL Detection Classifiers
 
 ![Peter Moss Acute Myeloid & Lymphoblastic Leukemia AI Research Project](https://www.PeterMossAmlAllResearch.com/media/images/banner.png)
 
-The Peter Moss Acute Lymphoblastic Leukemia Convolutional Neural Network is a Caffe network created by following the work in the research paper: [Acute Myeloid Leukemia Classification Using Convolution Neural Network In Clinical Decision Support System](https://airccj.org/CSCP/vol7/csit77505.pdf "Acute Myeloid Leukemia Classification Using Convolution Neural Network In Clinical Decision Support System").
+The Peter Moss Acute Myeloid & Lymphoblastic Leukemia R classifiers are a collection of projects that use computer vision written in R to classify Acute Myeloid & Lymphoblastic Leukemia in unseen images.
 
 &nbsp;
 
-## Network Layers
+# R Projects
 
-The Acute Lymphoblastic Leukemia Convolutional Neural Network uses prototxt files to define the network layers.
+| Project | Description | Status |
+| ------- | ----------- | ------ |
 
-&nbsp;
-
-## Training Data
-
-**ALL_IDB1** from the [Acute Lymphoblastic Leukemia Image Database for Image Processing](https://homes.di.unimi.it/scotti/all/ "Acute Lymphoblastic Leukemia Image Database for Image Processing") datasets is used in this project, to use this dataset you must request access by visiting [this section of the website](https://homes.di.unimi.it/scotti/all/#download "this section of the website").
-
-&nbsp;
-
-# Detecting Acute Lymphoblastic Leukemia Using Caffe, OpenVino & Neural Compute Stick Series
-
-- [Introduction to convolutional neural networks in Caffe\*](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Caffe-Layers.md "Introduction to convolutional neural networks in Caffe*")
-- [Preparing the Acute Lymphoblastic Leukemia dataset](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Data-Sorting.md "Preparing the Acute Lymphoblastic Leukemia dataset")
 
 &nbsp;
 
