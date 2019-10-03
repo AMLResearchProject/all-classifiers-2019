@@ -2,7 +2,8 @@
 
 ## AML & ALL Detection Classifiers
 
-**Convolutional Neural Networks to detect Acute Myeloid Leukemia and Acute Lymphoblastic Leukemia**
+[![CURRENT RELEASE](https://img.shields.io/badge/CURRENT%20RELEASE-0.0.0-blue.svg)](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/0.0.0)
+[![UPCOMING RELEASE](https://img.shields.io/badge/UPCOMING%20RELEASE-0.0.1-blue.svg)](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/0.0.1)
 
 ![Peter Moss Acute Myeloid & Lymphoblastic Leukemia AI Research Project](https://www.PeterMossAmlAllResearch.com/media/images/banner.png)
 The Peter Moss Acute Myeloid & Lymphoblastic Leukemia classifiers are a collection of projects that use computer vision to classify AML/ALL in unseen images.
@@ -62,9 +63,9 @@ The Peter Moss Acute Myeloid & Lymphoblastic Leukemia Python FastAI classifier p
 
 The Peter Moss Acute Myeloid & Lymphoblastic Leukemia Python Keras classifier projects are a collection of projects that use computer vision programs written using Keras to classify Acute Myeloid & Lymphoblastic Leukemia in unseen images.
 
-| Dataset  | Project                                                                                                                                                | Language | Description                                         | Status  | Author                                                                                           |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- | --------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------ |
-| ALL_IDB2 | [QuantisedCode](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Keras/QuantisedCode/QuantisedCode.ipynb "QuantisedCode") | Python   | A model trained using Keras with Tensorflow Backend | Ongoing | [Amita Kapoor](https://www.petermossamlallresearch.com/team/amita-kapoor/profile "Amita Kapoor") |
+| Dataset  | Project                                                                                                                                                | Language | Description                                         | Status  | Author                                                                                                                                                                                                 |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- | --------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ALL_IDB2 | [QuantisedCode](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Keras/QuantisedCode/QuantisedCode.ipynb "QuantisedCode") | Python   | A model trained using Keras with Tensorflow Backend | Ongoing | [Amita Kapoor](https://www.petermossamlallresearch.com/team/amita-kapoor/profile "Amita Kapoor") & [Taru Jain](https://www.petermossamlallresearch.com/students/student/taru-jain/profile "Taru Jain") |
 
 &nbsp;
 
