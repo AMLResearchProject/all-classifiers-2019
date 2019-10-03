@@ -1,29 +1,16 @@
 # Peter Moss Acute Myeloid & Lymphoblastic Leukemia AI Research Project
 
-## Acute Lymphoblastic Leukemia Convolutional Neural Network
+## Acute Myeloid & Lymphoblastic Leukemia Python Keras Classifiers
 
 ![Peter Moss Acute Myeloid & Lymphoblastic Leukemia AI Research Project](https://www.PeterMossAmlAllResearch.com/media/images/banner.png)
 
-The Peter Moss Acute Lymphoblastic Leukemia Convolutional Neural Network is a Caffe network created by following the work in the research paper: [Acute Myeloid Leukemia Classification Using Convolution Neural Network In Clinical Decision Support System](https://airccj.org/CSCP/vol7/csit77505.pdf "Acute Myeloid Leukemia Classification Using Convolution Neural Network In Clinical Decision Support System").
+The Peter Moss Acute Myeloid & Lymphoblastic Leukemia Python Keras classifiers are a collection of projects that use computer vision written in Python using Keras to classify Acute Myeloid & Lymphoblastic Leukemia in unseen images.
 
 &nbsp;
 
-## Network Layers
-
-The Acute Lymphoblastic Leukemia Convolutional Neural Network uses prototxt files to define the network layers.
-
-&nbsp;
-
-## Training Data
-
-**ALL_IDB1** from the [Acute Lymphoblastic Leukemia Image Database for Image Processing](https://homes.di.unimi.it/scotti/all/ "Acute Lymphoblastic Leukemia Image Database for Image Processing") datasets is used in this project, to use this dataset you must request access by visiting [this section of the website](https://homes.di.unimi.it/scotti/all/#download "this section of the website").
-
-&nbsp;
-
-# Detecting Acute Lymphoblastic Leukemia Using Caffe, OpenVino & Neural Compute Stick Series
-
-- [Introduction to convolutional neural networks in Caffe\*](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Caffe-Layers.md "Introduction to convolutional neural networks in Caffe*")
-- [Preparing the Acute Lymphoblastic Leukemia dataset](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Caffe/allCNN/Data-Sorting.md "Preparing the Acute Lymphoblastic Leukemia dataset")
+| Dataset  | Project                                                                                                                                                | Language | Description                                         | Status  | Author                                                                                                                                                                                                 |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- | --------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ALL_IDB2 | [QuantisedCode](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Keras/QuantisedCode/QuantisedCode.ipynb "QuantisedCode") | Python   | A model trained using Keras with Tensorflow Backend | Ongoing | [Amita Kapoor](https://www.petermossamlallresearch.com/team/amita-kapoor/profile "Amita Kapoor") & [Taru Jain](https://www.petermossamlallresearch.com/students/student/taru-jain/profile "Taru Jain") |
 
 &nbsp;
 
