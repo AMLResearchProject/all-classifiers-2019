@@ -58,6 +58,18 @@ Now you need to upload the project root to your Google Drive, placing the jpg fi
 
 # Results on ALL-IDB (Images)
 
+In the paper the authors got 96.43% using a Matlab classifier. This network got around 93% accuracy so improvements should be made.
+
+## Training Results
+
+Below are the training results for 100 epochs.
+
+| Loss          | Accuracy     | Precision     | Recall       | AUC          |
+| ------------- | ------------ | ------------- | ------------ | ------------ |
+| 0.131 (~0.13) | 0.928 (~93%) | 0.904 (~0.91) | 0.999 (~1.0) | 0.994 (~1.0) |
+
+## Overall Results
+
 | Figures of merit     | Value | Percentage |
 | -------------------- | ----- | ---------- |
 | True Positives       | 2     | 7.14%      |
