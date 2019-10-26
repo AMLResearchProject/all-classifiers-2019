@@ -8,9 +8,9 @@ The Peter Moss Acute Myeloid & Lymphoblastic Leukemia Python Caffe classifiers a
 
 &nbsp;
 
-| Projects                                                                                                                                        | Language | Description                                          | Status  |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ---------------------------------------------------- | ------- |
-| [AllCNN Caffe Classifier](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Caffe/allCNN "AllCNN Caffe Classifier") | Python   | allCNN classifier created using the Caffe framework. | Ongoing |
+| Projects                                                                                                                                        | Description                                          | Status  |
+| ----------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ------- |
+| [AllCNN Caffe Classifier](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Caffe/allCNN "AllCNN Caffe Classifier") | allCNN classifier created using the Caffe framework. | Ongoing |
 
 &nbsp;
 
