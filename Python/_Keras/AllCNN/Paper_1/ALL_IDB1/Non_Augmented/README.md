@@ -56,6 +56,18 @@ Once you have used the command above you will see a directory called **AML-ALL-C
 
 Now you need to upload the project root to your Google Drive, placing the jpg files from the ALL_IDB1 dataset in the **Model/Data/Training/** directory. Once you have done this open **AML-ALL-Classifiers/Python/\_Keras/AllCNN/Paper_1/ALL_IDB1/Non_Augmented/AlCNN.ipynb** in Google Colab and continue from the **Google Drive / Colab** section to complete the project.
 
+# Results on ALL-IDB (Images)
+
+| Figures of merit     | Value | Percentage |
+| -------------------- | ----- | ---------- |
+| True Positives       | 2     | 7.14%      |
+| False Positives      | 7     | 25.00%     |
+| True Negatives       | 19    | 67.96%     |
+| False Negatives      | 0     | 0.00%      |
+| Misclassification    | 7     | 25.00%     |
+| Sensitivity / Recall | 1.0   | 100%       |
+| Specificity          | 0.73  | 73%        |
+
 &nbsp;
 
 # Contributing
