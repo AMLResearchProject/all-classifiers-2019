@@ -11,7 +11,7 @@
 # License:       MIT License
 # Credit:        Based on Amita Kapoor & Taru Jain's QuantizedCode notebook.
 #                https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/Python/_Keras/QuantisedCode/QuantisedCode.ipynb
-# Last Modified: 2019-05-09
+# Last Modified: 2019-10-26
 #
 ############################################################################################
 

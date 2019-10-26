@@ -9,7 +9,7 @@
 # Title:         Helpers Class
 # Description:   Helper functions used with Keras AllCNN.
 # License:       MIT License
-# Last Modified: 2019-05-09
+# Last Modified: 2019-10-26
 #
 ############################################################################################
 
