@@ -6,9 +6,9 @@
 
 ### Keras Classifiers
 
-#### AllCNN Classifier (Paper 1/Dataset 1/Non Augmented)
+#### AllCNN Classifier (Paper 1/Dataset 2/Non Augmented)
 
-The Peter Moss Acute Myeloid & Lymphoblastic Leukemia Keras AllCNN Paper 1/Dataset 1/Non Augmented Classifier uses the [ACUTE LEUKEMIA CLASSIFICATION USING CONVOLUTION NEURAL NETWORK IN CLINICAL DECISION SUPPORT SYSTEM](https://airccj.org/CSCP/vol7/csit77505.pdf "ACUTE LEUKEMIA CLASSIFICATION USING CONVOLUTION NEURAL NETWORK IN CLINICAL DECISION SUPPORT SYSTEM") paper and the original (non augmented) [ALL_IDB1](https://homes.di.unimi.it/scotti/all/#datasets "ALL_IDB1") dataset.
+The Peter Moss Acute Myeloid & Lymphoblastic Leukemia Keras AllCNN Paper 1/Dataset 2/Non Augmented Classifier uses the [ACUTE LEUKEMIA CLASSIFICATION USING CONVOLUTION NEURAL NETWORK IN CLINICAL DECISION SUPPORT SYSTEM](https://airccj.org/CSCP/vol7/csit77505.pdf "ACUTE LEUKEMIA CLASSIFICATION USING CONVOLUTION NEURAL NETWORK IN CLINICAL DECISION SUPPORT SYSTEM") paper and the original (non augmented) [ALL_IDB2](https://homes.di.unimi.it/scotti/all/#datasets "ALL_IDB2") dataset.
 
 &nbsp;
 
@@ -69,13 +69,13 @@ First of all you should clone the [AML & ALL Classifiers](https://github.com/AML
   $ git clone https://github.com/AMLResearchProject/AML-ALL-Classifiers.git
 ```
 
-Once you have used the command above you will see a directory called **AML-ALL-Classifiers** in the location you chose to clone the repo to. In terminal, navigate to the **AML-ALL-Classifiers/Python/\_Keras/AllCNN/Paper_1/ALL_IDB1/Non_Augmented/** directory, this is your project root directory.
+Once you have used the command above you will see a directory called **AML-ALL-Classifiers** in the location you chose to clone the repo to. In terminal, navigate to the **AML-ALL-Classifiers/Python/\_Keras/AllCNN/Paper_1/ALL_IDB2/Non_Augmented/** directory, this is your project root directory.
 
 &nbsp;
 
 # Upload Project Root To Google Drive
 
-Now you need to upload the project root to your Google Drive, placing the jpg files from the ALL_IDB1 dataset in the **Model/Data/Training/** directory. Once you have done this open **AML-ALL-Classifiers/Python/\_Keras/AllCNN/Paper_1/ALL_IDB1/Non_Augmented/AllCNN.ipynb** in Google Colab and continue from the **Google Drive / Colab** section to complete the project.
+Now you need to upload the project root to your Google Drive, placing the tif files from the ALL_IDB2 dataset in the **Model/Data/Training/** directory. Once you have done this open **AML-ALL-Classifiers/Python/\_Keras/AllCNN/Paper_1/ALL_IDB2/Non_Augmented/AllCNN.ipynb** in Google Colab and continue from the **Google Drive / Colab** section to complete the project.
 
 &nbsp;
 
@@ -87,21 +87,21 @@ In the paper the authors got 96.43% using a Matlab classifier. This network got 
 
 Below are the training results for 100 epochs.
 
-| Loss          | Accuracy     | Precision     | Recall       | AUC          |
-| ------------- | ------------ | ------------- | ------------ | ------------ |
-| 0.131 (~0.13) | 0.928 (~93%) | 0.904 (~0.91) | 0.999 (~1.0) | 0.994 (~1.0) |
+| Loss          | Accuracy     | Precision     | Recall        | AUC          |
+| ------------- | ------------ | ------------- | ------------- | ------------ |
+| 0.083 (~0.84) | 0.961 (~96%) | 0.961 (~0.96) | 0.961 (~0.96) | 0.997 (~1.0) |
 
 ## Overall Results
 
 | Figures of merit     | Value | Percentage |
 | -------------------- | ----- | ---------- |
-| True Positives       | 2     | 7.14%      |
-| False Positives      | 7     | 25.00%     |
-| True Negatives       | 19    | 67.96%     |
-| False Negatives      | 0     | 0.00%      |
-| Misclassification    | 7     | 25.00%     |
-| Sensitivity / Recall | 1.0   | 100%       |
-| Specificity          | 0.73  | 73%        |
+| True Positives       | 1     | 1.92%      |
+| False Positives      | 25    | 48.08%     |
+| True Negatives       | 25    | 48.08%     |
+| False Negatives      | 1     | 1.92%      |
+| Misclassification    | 26    | 50.00%     |
+| Sensitivity / Recall | 0.96  | 96%        |
+| Specificity          | 0.5   | 50%        |
 
 &nbsp;
 
