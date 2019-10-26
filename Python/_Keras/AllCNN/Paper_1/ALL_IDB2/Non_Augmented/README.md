@@ -81,7 +81,7 @@ Now you need to upload the project root to your Google Drive, placing the tif fi
 
 # Results on ALL-IDB (Images)
 
-In the paper the authors got 96.43% using a Matlab classifier. This network got around 93% accuracy so improvements should be made.
+In the paper the authors got 96.43% using a Matlab classifier, however their results were from a different dataset. This network on the ALL_IDB2 dataset got around 96% accuracy.
 
 ## Training Results
 
@@ -101,7 +101,7 @@ Below are the training results for 100 epochs.
 | False Negatives      | 1     | 1.92%      |
 | Misclassification    | 26    | 50.00%     |
 | Sensitivity / Recall | 0.96  | 96%        |
-| Specificity          | 0.5   | 50%        |
+| Specificity          | 0.5   | 50%        | 8 |
 
 &nbsp;
 
