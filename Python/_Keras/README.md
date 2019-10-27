@@ -8,9 +8,11 @@ The Peter Moss Acute Myeloid & Lymphoblastic Leukemia Python Keras classifiers a
 
 &nbsp;
 
-| Dataset  | Project                                                                                                                                                | Language | Description                                         | Status  | Author                                                                                                                                                                                                 |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- | --------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ALL_IDB2 | [QuantisedCode](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Keras/QuantisedCode/QuantisedCode.ipynb "QuantisedCode") | Python   | A model trained using Keras with Tensorflow Backend | Ongoing | [Amita Kapoor](https://www.petermossamlallresearch.com/team/amita-kapoor/profile "Amita Kapoor") & [Taru Jain](https://www.petermossamlallresearch.com/students/student/taru-jain/profile "Taru Jain") |
+| Dataset  | Project                                                                                                                                                   | Description                                                                                                                                                                                                                  | Status  | Author                                                                                                                                                                                                 |
+| -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ALL_IDB2 | [QuantisedCode](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Keras/QuantisedCode/QuantisedCode.ipynb "QuantisedCode")    | A model trained to detect ALL using Keras with Tensorflow Backend, [Paper 1](https://airccj.org/CSCP/vol7/csit77505.pdf "Paper 1") and the original [Dataset 2](https://homes.di.unimi.it/scotti/all/#datasets "Dataset 2"). | Ongoing | [Amita Kapoor](https://www.petermossamlallresearch.com/team/amita-kapoor/profile "Amita Kapoor") & [Taru Jain](https://www.petermossamlallresearch.com/students/student/taru-jain/profile "Taru Jain") |
+| ALL_IDB1 | [AllCNN](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Keras/AllCNN/Paper_1/ALL_IDB1/Non_Augmented/AllCNN.ipynb "AllCNN") | A model trained to detect ALL using Keras with Tensorflow Backend, [Paper 1](https://airccj.org/CSCP/vol7/csit77505.pdf "Paper 1") and the original [Dataset 1](https://homes.di.unimi.it/scotti/all/#datasets "Dataset 1"). | Ongoing | [Adam Milton-Barker](https://www.petermossamlallresearch.com/team/adam-milton-barker/profile "Adam Milton-Barker")                                                                                     |  |
+| ALL_IDB2 | [AllCNN](https://github.com/AMLResearchProject/AML-ALL-Classifiers/tree/master/Python/_Keras/AllCNN/Paper_1/ALL_IDB2/Non_Augmented/AllCNN.ipynb "AllCNN") | A model trained to detect ALL using Keras with Tensorflow Backend, [Paper 1](https://airccj.org/CSCP/vol7/csit77505.pdf "Paper 1") and the original [Dataset 2](https://homes.di.unimi.it/scotti/all/#datasets "Dataset 2"). | Ongoing | [Adam Milton-Barker](https://www.petermossamlallresearch.com/team/adam-milton-barker/profile "Adam Milton-Barker")                                                                                     |
 
 &nbsp;
 
@@ -20,11 +22,19 @@ The Peter Moss Acute Myeloid & Lymphoblastic Leukemia AI Research project encour
 
 Please read the [CONTRIBUTING](https://github.com/AMLResearchProject/AML-ALL-Classifiers/blob/master/CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull requests. You will also find information about our code of conduct on this page.
 
-## Acute Myeloid & Lymphoblastic Leukemia Classifiers Contributors
+## Team Contributors
+
+The following Peter Moss Acute Myeloid & Lymphoblastic Leukemia AI Research project team members have contributed towards this repository:
 
 - [Adam Milton-Barker](https://www.petermossamlallresearch.com/team/adam-milton-barker/profile "Adam Milton-Barker") - Bigfinite IoT Network Engineer & Intel Software Innovator, Barcelona, Spain
 - [Salvatore Raieli](https://www.petermossamlallresearch.com/team/salvatore-raieli/profile "Salvatore Raieli") - PhD Immunolgy / Bioinformaticia, Bologna, Italy
 - [Dr Amita Kapoor](https://www.petermossamlallresearch.com/team/amita-kapoor/profile "Dr Amita Kapoor") - Delhi University, Delhi, India
+
+## Student Program Contributors
+
+The following AML/ALL AI Student Program Students & Research Interns have contributed towards this repository:
+
+- [Taru Jain](https://www.petermossamlallresearch.com/students/student/taru-jain/profile "Taru Jain") - Pre-final year undergraduate pursuing B.Tech in IT
 
 &nbsp;
 
