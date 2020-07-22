@@ -1,0 +1,15 @@
+{
+  "batch_size": 10,
+  "dims": 50,
+  "epochs": 100,
+  "expected_file": ".jpg",
+  "local_drive": "/content/gdrive/My Drive/",
+  "project_root": "AMLResearchProject/AML-ALL-Classifiers/Python/_Keras/AllCNN/ALL_IDB2/Paper_2/Augmented/",
+  "model_root": "Model",
+  "model_file": "model.json",
+  "data_dir": "/Data/Training",
+  "training_dir": "/Data/Train",
+  "validation_dir": "/Data/Test",
+  "valid_files": [".jpg", ".jpeg", ".png", ".tif"],
+  "val_steps": 5
+}
