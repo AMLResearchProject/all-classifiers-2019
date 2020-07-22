@@ -1,0 +1,78 @@
+name: "allCNN"
+layer {
+  name: "data"
+  type: "Input"
+  input_param { shape: { dim: 1 dim: 3 dim: 50 dim: 50 }}
+  top: "data"
+}
+layer {
+  name: "conv1"
+  type: "Convolution"
+  convolution_param {
+    num_output: 30
+    kernel_size: 5
+    stride: 1
+    pad: 2
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+  bottom: "data"
+  top: "conv1"
+}
+layer {
+  name: "conv2"
+  type: "Convolution"
+  convolution_param {
+    num_output: 30
+    kernel_size: 5
+    stride: 1
+    pad: 2
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+  bottom: "conv1"
+  top: "conv2"
+}
+layer {
+ name: "pool1"
+ type: "Pooling"
+ pooling_param {
+   pool: MAX
+   kernel_size: 2
+   stride: 2
+ }
+ bottom: "conv2"
+ top: "pool1"
+}
+layer {
+ name: "fc"
+ type: "InnerProduct"
+ inner_product_param {
+   num_output: 2
+   weight_filler {
+     type: "xavier"
+   }
+   bias_filler {
+     type: "constant"
+     value: 0
+   }
+ }
+ bottom: "pool1"
+ top: "fc"
+}
+layer {
+ name: "prob"
+ type: "Softmax"
+ bottom: "fc"
+ top: "prob"
+}

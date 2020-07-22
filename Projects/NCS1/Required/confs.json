@@ -1,0 +1,49 @@
+{
+    "Settings": {
+        "Logs": "Logs/"
+    },
+    "Classifier": {
+        "ALLGraph": "Model/ALLGraph.pb",
+        "BatchSize": 10,
+        "BatchTestSize": 30,
+        "Classes": "Classes.txt",
+        "DatasetDir": "Model/Data",
+        "Domain": "",
+        "Epochs": 65,
+        "EpochsTest": 1,
+        "EpochsDevCloud": 40,
+        "EpochsBeforeDecay": 10,
+        "FilePattern": "ALL_%s_*.tfrecord",
+        "ImageSize": 299,
+        "InceptionThreshold": 0.8,
+        "InceptionGraph": "Model/ALL.graph",
+        "InceptionGraphDevCloud": "Model/ALLDC.graph",
+        "IP": "",
+        "Labels": "Labels.txt",
+        "LearningRate": 0.0001,
+        "LearningRateDecay": 0.8,
+        "LogDir": "Model/_logs",
+        "LogDirEval": "Model/_logs_eval",
+        "Mean": 128,
+        "NetworkPath": "",
+        "NumClasses": 2,
+        "OutputNode": "InceptionV3/Predictions/Softmax",
+        "Port": 8080,
+        "RandomSeed": 50,
+        "Shards": 10,
+        "TestImagePath": "Model/Test",
+        "TFRecordFile": "ALL",
+        "TFRecordPattern": "ALL_%s_*.tfrecord",
+        "ValidationSize": 0.3,
+        "ValidIType": [
+            ".JPG",
+            ".JPEG",
+            ".PNG",
+            ".GIF",
+            ".jpg",
+            ".jpeg",
+            ".png",
+            ".gif"
+        ]
+    }
+}
